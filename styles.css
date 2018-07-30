@@ -1,0 +1,59 @@
+body{
+    padding-top: 80px;
+}
+.container {
+    display: flex;
+}
+.navigation-menu {
+    width: 120px;
+    position: fixed;
+}
+.components-container {
+    padding-left: 150px;
+    padding-bottom: 40px;
+    flex-grow: 1; 
+}
+.component-header {
+    display: block;
+}
+.component-header {
+    margin-bottom: 24px; 
+}
+.component-header:not(:first-child) {
+    margin-top: 48px; 
+}
+.component-example + .component-example {
+    margin-top: 20px; 
+}
+.component-example .card {
+    margin-bottom: 20px;
+}
+.component-example .modal {
+    display:block;
+    
+    position:relative;
+    top:auto;
+    right:auto;
+    left:auto;
+    bottom:auto;
+    z-index:1;
+}
+.component-example .modal-dialog {
+    width:90%;
+    margin: 5px;
+}
+.component-example .popover {
+    position:relative;
+    display:inline-block;
+    width:220px;
+    margin:20px
+}
+
+@media (max-width: 991px) {
+    .navigation-menu {
+        display: none;
+    }
+    .components-container {
+        padding-left: 0;
+    }
+}

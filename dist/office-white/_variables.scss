@@ -1,0 +1,153 @@
+$blue: #fe7109;
+$green: #10893e;
+$cyan: #0078d7;
+$yellow: #ffb900;
+$red: #e81123;
+
+$gray-100: #f7f8f9;
+$gray-200: #f2f2f2;
+$gray-300: #e5e5e5;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #a1a1a1;
+$gray-700: #495057;
+$gray-800: #222222;
+$gray-900: #212529;
+
+$secondary: #ffffff;
+
+$link-color: #444444;
+
+$font-family-sans-serif: "Segoe UI", "Roboto", "Helvetica Neue", "-apple-system", "BlinkMacSystemFont", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-size-base: 0.88rem;
+
+$enable-shadows: true;
+
+
+// Custom Variables
+
+$theme-font-weight-semibold: 600 !default;
+
+$theme-border-radius: 2px !default;
+$theme-border-radius-lg: 3px !default;
+
+$theme-box-shadow-sm: 0px 1px 4px 0px rgba(0,0,0,0.2) !default;
+$theme-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2) !default;
+$theme-box-shadow-lg: 0px 2px 6px 0px rgba(0,0,0,0.3) !default;
+
+
+// Breadcrumbs
+
+$breadcrumb-border-radius: 0;
+
+
+// Buttons + Forms
+
+$btn-padding-y: 0.4rem;
+$btn-padding-x: 1rem;
+
+$btn-box-shadow: $theme-box-shadow-sm;
+$btn-active-box-shadow: $theme-box-shadow-sm;
+$btn-border-radius: $theme-border-radius;
+$btn-border-radius-lg: $theme-border-radius;
+$btn-border-radius-sm: $theme-border-radius;
+
+
+// Cards
+
+$card-border-radius: $theme-border-radius;
+
+
+// Checkboxes
+
+$custom-control-indicator-size: 1.25rem;
+$custom-checkbox-indicator-border-radius: $theme-border-radius;
+$custom-control-indicator-bg-size: 100% 100%;
+$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-2 -2 12 12'><path fill='#ffffff' d='M7,1L3,5L1,3L0,4l3,3l5-5L7,1z'/></svg>");
+$custom-radio-indicator-icon-checked: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2.3' fill='#{$blue}'/></svg>");
+$custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><rect x='2' y='2' width='4' height='4' fill='#ffffff'/></svg>");
+
+
+// Dropdowns
+
+$dropdown-item-padding-y: 0.2rem;
+$dropdown-item-padding-x: 1rem;
+
+
+// Forms
+
+$input-btn-padding-x: 0.6rem;
+$input-focus-width: 0;
+$input-group-addon-bg: white;
+$input-group-addon-border-color: transparent;
+
+$input-border-radius: $theme-border-radius;
+$input-border-radius-lg: $theme-border-radius;
+$input-border-radius-sm: $theme-border-radius;
+
+$input-box-shadow: none;
+$input-focus-box-shadow: none;
+
+$custom-select-box-shadow: none;
+$custom-select-border-radius: $theme-border-radius;
+
+$custom-file-box-shadow: none;
+$custom-file-focus-box-shadow: none;
+
+
+// Jumbotron
+
+$jumbotron-padding: 1.5rem;
+
+
+// List group
+
+$list-group-item-padding-y: 0.65rem;
+$list-group-border-radius: $theme-border-radius;
+
+
+// Modals
+
+$modal-content-border-radius: $theme-border-radius;
+$modal-content-border-color: white;
+$modal-content-box-shadow-xs: $theme-box-shadow-lg;
+$modal-content-box-shadow-sm-up: $theme-box-shadow-lg;
+$modal-header-padding: 0.75rem;
+$modal-inner-padding: 0.75rem;
+
+
+// Navs
+
+$nav-pills-border-radius: $theme-border-radius;
+$nav-tabs-border-width: 0px;
+$nav-tabs-link-active-border-color: transparent transparent $blue;
+$nav-tabs-link-hover-border-color: transparent transparent $blue;
+$nav-divider-margin-y: 0.25rem;
+
+
+// Pagination
+
+$pagination-padding-x: 0.88rem;
+$pagination-padding-x-sm: 0.6rem;
+$pagination-padding-x-lg: 1.4rem;
+
+
+// Popovers
+
+$popover-box-shadow: $theme-box-shadow;
+$popover-border-radius: $theme-border-radius-lg;
+$popover-border-width: 0rem;
+$popover-header-padding-x: 1rem;
+$popover-body-padding-y: 0.75rem;
+
+
+// Progress bars
+
+$progress-height: 1rem;
+$progress-border-radius: 0;
+$progress-box-shadow: none;
+
+
+// Tables
+
+$table-cell-padding-sm: 0.3rem 0.5rem;

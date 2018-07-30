@@ -1,0 +1,283 @@
+.border-secondary {
+    border-color: $gray-300!important;
+}
+
+
+// Alerts
+
+.alert-secondary {
+    border-color: $gray-300;
+}
+
+
+// Badges
+
+.badge {
+    padding-top: 0.25em;
+    padding-bottom: 0.3em;
+}
+.badge.badge-secondary {
+    border: 1px solid #444444;
+}
+
+
+// Breadcrumbs
+
+.breadcrumb {
+    font-size: 1rem;
+}
+.breadcrumb-item {
+    font-weight: $theme-font-weight-semibold;
+}
+.breadcrumb-item a {
+    color: $primary;
+}
+
+
+// Buttons + Forms
+
+.btn:not(.btn-link).disabled,
+.btn:not(.btn-link):disabled {
+  @include box-shadow($btn-box-shadow);
+}
+@each $color, $value in $theme-colors {
+    .btn-outline-#{$color} {
+        border-width: 2px;
+    }
+}
+.btn-outline-secondary {
+    @include button-outline-variant($link-color);
+}
+.btn-secondary:focus:not(:disabled):not(.disabled),
+.btn-secondary.focus:not(:disabled):not(.disabled) {
+  @if $enable-shadows {
+    box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba($link-color, .2)!important;
+  } @else {
+    box-shadow: 0 0 0 $btn-focus-width rgba($link-color, .2)!important;
+  }
+}
+.btn-group-vertical > .btn {
+    @include border-radius($theme-border-radius-sm);
+}
+.btn.dropdown-toggle {
+    padding: 0.5rem 0.8rem 0.3rem;
+}
+.btn-group,
+.btn-group-vertical {
+    .btn + .btn,
+    .btn + .btn-group,
+    .btn-group + .btn,
+    .btn-group + .btn-group {
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+.btn-group > .btn:not(.btn-link):not(:active):not(:focus):not(:hover):not(:first-child) {
+    clip-path: inset(-2px -4px -6px -1px);
+}
+.btn-group-vertical > .btn:not(.btn-link):not(:active):not(:focus):not(:first-child) {
+    clip-path: inset(-1px -4px -6px -4px);
+}
+
+
+// Cards
+
+.card {
+    @include box-shadow($theme-box-shadow-xs);
+}
+.card.text-white.bg-secondary {
+    color: $gray-800!important;
+}
+
+
+// Checkboxes
+
+.custom-checkbox,
+.custom-radio {
+    .custom-control-input:not(:checked):not(:indeterminate) ~ .custom-control-label::before {
+        border: 2px solid rgba(0,0,0,0.2);
+    }
+    .custom-control-input:not(:checked):not(:indeterminate):not(:disabled) ~ .custom-control-label::before {
+        background-color: white;
+        box-shadow: none;
+    }
+    .custom-control-input:disabled ~ .custom-control-label::before {
+        background-color: rgba(204,204,204,0.4);
+        box-shadow: none;
+    }
+}
+    
+
+// Forms
+
+.form-control:focus {
+    border-color: $blue!important;
+}
+.form-control,
+.custom-select,
+.custom-file > .custom-file-label {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+select.form-control > option:checked,
+.custom-select > option:checked {
+    background-color: $blue;
+    color: white;
+}
+.custom-file > .custom-file-label::after {
+    border-left: 0;
+}
+.input-group > .input-group-prepend,
+.input-group > .input-group-append {
+    margin-right: 0;
+    margin-left: 0;
+}
+.input-group > .input-group-prepend > .btn,
+.input-group > .input-group-prepend > .input-group-text,
+.input-group > .input-group-append > .btn,
+.input-group > .input-group-append > .input-group-text {
+    @include border-right-radius(0);
+    @include border-left-radius(0);
+    background-color: $input-bg;
+    background-clip: padding-box;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: $input-border-width solid $input-border-color;
+    margin-right: 0;
+    margin-left: 0;
+}
+.input-group > .input-group-prepend > .btn,
+.input-group > .input-group-append > .btn {
+    box-shadow: none!important;
+    color: $gray-700;
+    padding-top: $input-btn-padding-y;
+    padding-bottom: $input-btn-padding-y;
+}
+.input-group > .input-group-prepend > .btn.focus:not(:disabled):not(.disabled),
+.input-group > .input-group-prepend > .btn:focus:not(:disabled):not(.disabled),
+.input-group > .input-group-append > .btn.focus:not(:disabled):not(.disabled),
+.input-group > .input-group-append > .btn:focus:not(:disabled):not(.disabled) {
+    box-shadow: none!important;
+}
+.input-group > .input-group-prepend > .btn:hover,
+.input-group > .input-group-append > .btn:hover {
+    background-color: rgba(0,0,0,0.16);
+    color: $gray-700;
+}
+.input-group > .input-group-prepend > .btn.active,
+.input-group > .input-group-prepend > .btn:active,
+.input-group > .input-group-append > .btn.active,
+.input-group > .input-group-append > .btn:active {
+    background-color: rgba(0,0,0,0.20);
+    border-bottom: $input-border-width solid $input-border-color;
+    box-shadow: none!important;
+    color: $gray-700;
+}
+
+
+// Jumbotron
+
+.jumbotron {
+    border-radius: $theme-border-radius-sm;
+}
+
+
+// Modal
+
+.modal-header {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+
+// Navbar
+
+.navbar {
+    @include box-shadow($theme-box-shadow-sm);
+}
+.navbar.bg-dark input[type=text], 
+.navbar.bg-dark input[type=password], 
+.navbar.bg-primary input[type=text], 
+.navbar.bg-primary input[type=password] {
+    color: #ffffff;
+    background-color: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.3);
+}
+.navbar.bg-dark input[type=text]:focus, 
+.navbar.bg-dark input[type=password]:focus, 
+.navbar.bg-primary input[type=text]:focus, 
+.navbar.bg-primary input[type=password]:focus {
+    border-color: rgba(255,255,255,0.6);
+}
+.navbar.bg-dark input[type=text]:disabled, 
+.navbar.bg-dark input[type=password]:disabled, 
+.navbar.bg-primary input[type=text]:disabled, 
+.navbar.bg-primary input[type=password]:disabled {
+    background-color: rgba(255,255,255,0.03);
+}
+.navbar.bg-dark input[type=text]::placeholder, 
+.navbar.bg-dark input[type=password]::placeholder, 
+.navbar.bg-primary input[type=text]::placeholder, 
+.navbar.bg-primary input[type=password]::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+
+// Navs
+
+.nav .nav-link {
+    font-weight: $theme-font-weight-semibold;
+}
+.nav-tabs .nav-link,
+.nav-tabs .nav-link.disabled {
+    border-bottom: 2px solid $gray-300;
+}
+.nav-tabs .nav-link.active {
+    border-bottom: 2px solid $blue;
+}
+.nav-pills.flex-column .nav-link {
+    @include border-radius($theme-border-radius-sm);
+}
+.nav-pills .nav-item:not(.show) .nav-link:not(.disabled):not(.active) {
+    color: $primary;
+}
+  
+
+// Pagination
+
+.pagination {
+    @include border-radius($theme-border-radius);
+
+    background-color: $gray-200;
+    font-weight: $theme-font-weight-semibold;
+    padding: 0.4rem;
+}
+.pagination .page-link {
+    font-size: 1rem;
+}
+.pagination-sm .page-link {
+    font-size: 0.88rem;
+}
+.pagination-lg .page-link {
+    font-size: 1.1rem;
+}
+.pagination .page-link,
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link,
+.pagination-lg .page-link,
+.pagination-lg .page-item:first-child .page-link,
+.pagination-lg .page-item:last-child .page-link,
+.pagination-sm .page-link,
+.pagination-sm .page-item:first-child .page-link,
+.pagination-sm .page-item:last-child .page-link {
+    @include border-radius($theme-border-radius);
+    
+    box-sizing: content-box;
+    margin-left: 2px;
+    line-height: 1rem;
+    text-align: center;
+    min-width: 1rem;
+}
+
