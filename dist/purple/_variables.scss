@@ -98,7 +98,7 @@ $input-focus-box-shadow: none;
 
 $custom-select-border-width: 2px;
 $custom-select-box-shadow: none;
-$custom-select-border-radius: 0;
+$custom-select-border-radius: $input-border-radius;
 $custom-select-bg: rgba(0,0,0,0.08);
 $custom-select-disabled-bg: rgba(0,0,0,0.03);
 
