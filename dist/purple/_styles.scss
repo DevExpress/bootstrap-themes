@@ -137,8 +137,6 @@ select.form-control > option:checked,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append > .btn,
 .input-group > .input-group-append > .input-group-text {
-    @include border-right-radius(0);
-    @include border-left-radius(0);
     background-color: $input-bg;
     background-clip: padding-box;
     border-left: 0;
@@ -150,10 +148,23 @@ select.form-control > option:checked,
 }
 .input-group > .input-group-prepend > .btn,
 .input-group > .input-group-append > .btn {
+    @include border-radius($input-border-radius);
+
     box-shadow: none!important;
     color: $gray-700;
     padding-top: $input-btn-padding-y;
     padding-bottom: $input-btn-padding-y;
+}
+.input-group > .input-group-prepend > .btn,
+.input-group > .input-group-append:not(:last-child) > .btn,
+.input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+  @include border-right-radius(0);
+}
+
+.input-group > .input-group-append > .btn,
+.input-group > .input-group-prepend:not(:first-child) > .btn,
+.input-group > .input-group-prepend:first-child > .btn:not(:first-child) {
+  @include border-left-radius(0);
 }
 .input-group > .input-group-prepend > .btn.focus:not(:disabled):not(.disabled),
 .input-group > .input-group-prepend > .btn:focus:not(:disabled):not(.disabled),

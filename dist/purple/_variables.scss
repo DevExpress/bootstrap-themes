@@ -89,9 +89,9 @@ $input-focus-width: 0;
 $input-group-addon-bg: transparent;
 $input-group-addon-border-color: transparent;
 
-$input-border-radius: 0;
-$input-border-radius-lg: 0;
-$input-border-radius-sm: 0;
+$input-border-radius: 3px 3px 0 0;
+$input-border-radius-lg: $input-border-radius;
+$input-border-radius-sm: $input-border-radius;
 
 $input-box-shadow: none;
 $input-focus-box-shadow: none;
