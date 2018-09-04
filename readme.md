@@ -12,13 +12,13 @@ Read this [blog post](https://community.devexpress.com/blogs/aspnet/archive/2018
 
 ## Table of contents
 
-- [What's included](#what's-included)
-    - [DevExpress OfficeWhite](DevExpress-OfficeWhite)
-    - [DevExpress Purple](DevExpress-Purple)
+- [What's included](#whats-included)
+    - [DevExpress OfficeWhite](DevExpress-officewhite)
+    - [DevExpress Purple](devexpress-purple)
 - [Compatibility](#compatibility)
-- [Getting started](#gettingstarted)
-- [Build steps](#Build-steps)
-- [Copyright and license](#Copyright-and-license)
+- [Getting started](#getting-started)
+- [Build steps](#build-steps)
+- [Copyright and license](#copyright-and-license)
 - [Links](#links)
 
 ## What's Included
