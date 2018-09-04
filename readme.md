@@ -12,10 +12,30 @@ Read this [blog post](https://community.devexpress.com/blogs/aspnet/archive/2018
 
 ## Table of contents
 
+- [What's included](#what's-included)
+    - [DevExpress OfficeWhite](DevExpress-OfficeWhite)
+    - [DevExpress Purple](DevExpress-Purple)
+- [Compatibility](#compatibility)
 - [Getting started](#gettingstarted)
 - [Build steps](#Build-steps)
 - [Copyright and license](#Copyright-and-license)
 - [Links](#links)
+
+## What's Included
+
+Included are two free themes:
+
+### DevExpress OfficeWhite
+
+[<img src="https://community.devexpress.com/blogs/aspnet/18.1Release/ASP.NET/DevExpressOfficeWhiteBootstrapTheme_Buttons.png" width="580" height="" />](https://community.devexpress.com/blogs/aspnet/18.1Release/ASP.NET/DevExpressOfficeWhiteBootstrapTheme_Buttons.png) 
+
+### DevExpress Purple
+
+[<img src="https://community.devexpress.com/blogs/aspnet/18.1Release/ASP.NET/DevExpressPurpleBootstrapTheme_Buttons.png" width="580" height="" />](https://community.devexpress.com/blogs/aspnet/18.1Release/ASP.NET/DevExpressOfficeWhiteBootstrapTheme_Buttons.png) 
+
+## Compatibility
+
+These themes were expressly created for websites that were built using Bootstrap v4 or later.
 
 ## Getting started
 
