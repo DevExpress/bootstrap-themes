@@ -2,8 +2,8 @@
     <img src="https://community.devexpress.com/blogs/aspnet/DevExpress-Powered-Color-Large.png" alt="DevExpress logo" title="DevExpress" align="right" />
 </a>
 
-Free DevExpress Bootstrap Themes
-================================
+Free Bootstrap 4 Themes by DevExpress
+=====================================
 
 This repository contains free and open source Bootstrap 4 themes. 
 Each folder under the `/dist/` folder contains a theme, and includes css files you may distribute (bootstrap.css and bootstrap.min.css) and the theme source scss files.
