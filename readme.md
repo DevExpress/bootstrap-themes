@@ -13,7 +13,7 @@ Read this [blog post](https://community.devexpress.com/blogs/aspnet/archive/2018
 ## Table of contents
 
 - [What's included](#whats-included)
-    - [DevExpress OfficeWhite](DevExpress-officewhite)
+    - [DevExpress OfficeWhite](devexpress-officewhite)
     - [DevExpress Purple](devexpress-purple)
 - [Compatibility](#compatibility)
 - [Getting started](#getting-started)
