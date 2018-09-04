@@ -1,9 +1,19 @@
-# DevExpress Bootstrap Themes
+<a href="https://DevExpress.com/">
+    <img src="https://community.devexpress.com/blogs/aspnet/DevExpress-Powered-Color-Large.png" alt="DevExpress logo" title="DevExpress" align="right" />
+</a>
 
-## A collection of Bootstrap 4 Themes from DevExpress
+Free DevExpress Bootstrap Themes
+================================
 
 This repository contains free and open source Bootstrap 4 themes. 
 Each folder under the `/dist/` folder contains a theme, and includes css files you may distribute (bootstrap.css and bootstrap.min.css) and the theme source scss files.
+
+## Table of contents
+
+- [Getting started](#gettingstarted)
+- [Build steps](#Build-steps)
+- [Copyright and license](#Copyright-and-license)
+- [Links](#links)
 
 ## Getting started
 
@@ -21,3 +31,11 @@ To compile and modify the themes, you'll need to use npm.
 
 Copyright © 2018 Developer Express Inc. All trademarks or registered trademarks are property of their respective owners. 
 This project code is released under the [MIT License](https://opensource.org/licenses/MIT).
+
+## Links
+
+* [Web site](https://www.devexpress.com/products/net/controls/asp/bootstrap-webforms.xml)
+* [Documentation](https://documentation.devexpress.com/AspNetBootstrap/117864/ASP-NET-Bootstrap-Controls)
+* [Blog](https://community.devexpress.com/blogs/aspnet/archive/2018/08/15/free-devexpress-bootstrap-4-themes.aspx)
+* [Issue tracker](https://github.com/DevExpress/bootstrap-themes/issues)
+* [Source code](https://github.com/DevExpress/bootstrap-themes/)
