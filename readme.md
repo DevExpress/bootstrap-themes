@@ -29,9 +29,13 @@ Included are two free themes:
 
 [<img src="https://community.devexpress.com/blogs/aspnet/18.1Release/ASP.NET/DevExpressOfficeWhiteBootstrapTheme_Buttons.png" width="580" height="" />](https://community.devexpress.com/blogs/aspnet/18.1Release/ASP.NET/DevExpressOfficeWhiteBootstrapTheme_Buttons.png) 
 
+[Demo](https://devexpress.github.io/bootstrap-themes/index.html?theme=office-white)
+
 ### DevExpress Purple
 
 [<img src="https://community.devexpress.com/blogs/aspnet/18.1Release/ASP.NET/DevExpressPurpleBootstrapTheme_Buttons.png" width="580" height="" />](https://community.devexpress.com/blogs/aspnet/18.1Release/ASP.NET/DevExpressOfficeWhiteBootstrapTheme_Buttons.png) 
+
+[Demo](https://devexpress.github.io/bootstrap-themes/index.html?theme=purple)
 
 ## Compatibility
 
@@ -56,6 +60,7 @@ This project code is released under the [MIT License](https://opensource.org/lic
 
 ## Links
 
+* [Demo](https://devexpress.github.io/bootstrap-themes/index.html?theme=office-white)
 * [Web site](https://www.devexpress.com/products/net/controls/asp/bootstrap-webforms.xml)
 * [Documentation](https://documentation.devexpress.com/AspNetBootstrap/117864/ASP-NET-Bootstrap-Controls)
 * [Blog](https://community.devexpress.com/blogs/aspnet/archive/2018/08/15/free-devexpress-bootstrap-4-themes.aspx)
