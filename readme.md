@@ -33,7 +33,7 @@ Included are two free themes:
 
 ### DevExpress Purple
 
-[<img src="https://community.devexpress.com/blogs/aspnet/18.1Release/ASP.NET/DevExpressPurpleBootstrapTheme_Buttons.png" width="580" height="" />](https://community.devexpress.com/blogs/aspnet/18.1Release/ASP.NET/DevExpressOfficeWhiteBootstrapTheme_Buttons.png) 
+[<img src="https://community.devexpress.com/blogs/aspnet/18.1Release/ASP.NET/DevExpressPurpleBootstrapTheme_Buttons.png" width="580" height="" />](https://community.devexpress.com/blogs/aspnet/18.1Release/ASP.NET/DevExpressPurpleBootstrapTheme_Buttons.png) 
 
 [Demo](https://devexpress.github.io/bootstrap-themes/index.html?theme=purple)
 
