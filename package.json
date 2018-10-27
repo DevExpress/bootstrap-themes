@@ -28,12 +28,13 @@
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",
-    "lazypipe": "^1.0.1",
     "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.1",
     "gulp-clean-css": "^3.9.3",
+    "gulp-connect": "^5.6.1",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "*",
-    "gulp-sourcemaps": "^2.6.4"
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "lazypipe": "^1.0.1"
   }
 }

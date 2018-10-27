@@ -7,7 +7,8 @@ var gulp  = require('gulp'),
   rename = require('gulp-rename'),
   lazypipe = require('lazypipe'),
   postcss      = require('gulp-postcss'),
-  autoprefixer = require('autoprefixer');
+  autoprefixer = require('autoprefixer'),
+  connect = require('gulp-connect');
 
 var compileTheme = lazypipe()
                    .pipe(sourcemaps.init)
@@ -38,17 +39,32 @@ themes.forEach(theme => {
       .pipe(gulp.dest('dist/' + theme + '/'))
       .pipe(minifyCss())
       .pipe(gulp.dest('dist/' + theme + '/'))
+      .pipe(connect.reload());
   });
 });
 
-gulp.task('watch', ['default'], function() {
+gulp.task('connect', themes.map(theme => 'compile-' + theme), function() {
+  connect.server({
+    livereload: true,
+    port: 8888
+  });
+});
+
+gulp.task('html', function() {
+  gulp.src('./*.html')
+   .pipe(connect.reload());
+});
+
+gulp.task('watch-and-compile', function() {
   themes.forEach(theme => {
     gulp.watch(['dist/' + theme + '/*.scss'], ['compile-' + theme]);
   });
+  gulp.watch(['./*.html'], ['html']);
 });
 
-gulp.task('default', themes.map(theme => 'compile-' + theme), function() {
+gulp.task('default', ['connect', 'watch-and-compile'], function() {
 });
+
 
 
 
