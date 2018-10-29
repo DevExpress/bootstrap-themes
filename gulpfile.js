@@ -62,7 +62,10 @@ gulp.task('watch-and-compile', function() {
   gulp.watch(['./*.html'], ['html']);
 });
 
-gulp.task('default', ['connect', 'watch-and-compile'], function() {
+gulp.task('watch', ['connect', 'watch-and-compile'], function() {
+});
+
+gulp.task('default', themes.map(theme => 'compile-' + theme), function() {
 });
 
 
