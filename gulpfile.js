@@ -43,7 +43,7 @@ themes.forEach(theme => {
   });
 });
 
-gulp.task('connect', themes.map(theme => 'compile-' + theme), function() {
+gulp.task('connect', function() {
   connect.server({
     livereload: true,
     port: 8888
@@ -55,19 +55,13 @@ gulp.task('html', function() {
    .pipe(connect.reload());
 });
 
-gulp.task('watch-and-compile', function() {
+gulp.task('watch', ['default', 'connect'], function() {
   themes.forEach(theme => {
     gulp.watch(['dist/' + theme + '/*.scss'], ['compile-' + theme]);
   });
   gulp.watch(['./*.html'], ['html']);
 });
 
-gulp.task('watch', ['connect', 'watch-and-compile'], function() {
-});
-
 gulp.task('default', themes.map(theme => 'compile-' + theme), function() {
 });
-
-
-
 
