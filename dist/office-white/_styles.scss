@@ -137,19 +137,42 @@ select.form-control > option:checked,
 
 // Navs
 
-.nav-tabs .nav-link,
-.nav-tabs .nav-link.disabled {
-    border-bottom: 2px solid $gray-300;
+.nav-tabs .nav-link:hover:before,
+.nav-tabs .nav-link:focus:before,
+.nav-tabs .nav-link.active:before {
+    content: " ";
+    border-bottom: $nav-tabs-border-width solid currentColor;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: .15;
 }
-.nav-tabs .nav-link.active {
-    border-bottom: 2px solid $blue;
+.nav-tabs .nav-link:focus:before {
+    background-color: $gray-700;
+}
+.nav-tabs .nav-link.active:before {
+    background-color: transparent;
+    border-bottom-color: $blue;
+    opacity: 1; 
+}
+.nav-tabs .nav-item {
+    position: relative;
 }
 .nav-tabs .nav-link,
 .nav-tabs .nav-link.active {
     color: #222222;
 }
-.nav-pills .nav-item:not(.show) .nav-link:not(.disabled):not(.active) {
-    color: $primary;
+.nav-tabs .nav-link,
+.nav-pills .nav-link {
+    outline: none;
+}
+.nav-pills .nav-item:not(.show) > .nav-link:not(.active):hover {
+    background-color: $gray-200;
+}
+.nav-pills .nav-item:not(.show) > .nav-link:not(.active):focus {
+    background-color: $gray-300;
 }
 
 
