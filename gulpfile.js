@@ -32,33 +32,40 @@ var minifyCss = lazypipe()
                 .pipe(cleanCss)
                 .pipe(rename, {suffix: '.min'});
 
-var compileTasks = themes.map(theme =>
+themes.forEach(theme => {
   gulp.task('compile-' + theme, () =>
     gulp.src('dist/' + theme + '/*.scss')
       .pipe(compileTheme())
       .pipe(gulp.dest('dist/' + theme + '/'))
       .pipe(minifyCss())
       .pipe(gulp.dest('dist/' + theme + '/'))
-      .pipe(connect.reload())
-  ));
+      .pipe(connect.reload()));
+  gulp.task('watch-' + theme, (cb) => {
+    gulp.watch('dist/' + theme + '/*.scss', gulp.series('compile-' + theme));
+    cb();
+  });
+});
 
-gulp.task('connect', () =>
+gulp.task('connect', (cb) => {
   connect.server({
     livereload: true,
     port: 8888
-  }));
-
-gulp.task('html', () =>
-  gulp.src('./*.html')
-   .pipe(connect.reload()));
-
-gulp.task('default', gulp.series(themes.map(theme => "compile-" + theme)));
-gulp.task('watch', gulp.series('default', 'connect', (done) => {
-  themes.forEach(theme => {
-    gulp.watch('dist/' + theme + '/*.scss', gulp.series('compile-' + theme));
   });
+  cb();
+});
+
+gulp.task('html', (cb) => {
+  gulp.src('./*.html')
+   .pipe(connect.reload());
+  cb();
+});
+
+gulp.task('attachScss', gulp.series(themes.map(theme => "watch-" + theme)));
+gulp.task('attachHtml', (cb) => {
   gulp.watch('./*.html', gulp.series('html'));
-  done();
-}));
+  cb();
+});
+gulp.task('default', gulp.series(themes.map(theme => "compile-" + theme))); 
+gulp.task('watch', gulp.series('default', 'connect', 'attachHtml', 'attachScss'));
 
 
