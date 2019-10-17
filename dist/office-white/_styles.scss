@@ -120,12 +120,8 @@ select.form-control > option:checked,
 .input-group > .input-group-prepend > .btn,
 .input-group > .input-group-append > .btn {
   border-radius: $theme-border-radius!important;
-}
-.input-group > .input-group-prepend > .btn {
-  margin-right: 0.4rem;
-}
-.input-group > .input-group-append > .btn {
-  margin-left: 0.4rem;
+  box-shadow: none !important;
+  border-color: $input-border-color;
 }
 
 // Navbar
