@@ -120,12 +120,8 @@ select.form-control > option:checked,
 .input-group > .input-group-prepend > .btn,
 .input-group > .input-group-append > .btn {
   border-radius: $theme-border-radius!important;
-}
-.input-group > .input-group-prepend > .btn {
-  margin-right: 0.4rem;
-}
-.input-group > .input-group-append > .btn {
-  margin-left: 0.4rem;
+  box-shadow: none !important;
+  border-color: $input-border-color;
 }
 
 // Navbar
@@ -137,19 +133,44 @@ select.form-control > option:checked,
 
 // Navs
 
-.nav-tabs .nav-link,
-.nav-tabs .nav-link.disabled {
-    border-bottom: 2px solid $gray-300;
+.nav-tabs .nav-link:hover:before,
+.nav-tabs .nav-link:focus:before,
+.nav-tabs .nav-link.active:before {
+    content: " ";
+    border-bottom: $nav-tabs-border-width solid currentColor;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: .15;
 }
-.nav-tabs .nav-link.active {
-    border-bottom: 2px solid $blue;
+.nav-tabs .nav-link:focus:before {
+    background-color: $gray-700;
+}
+.nav-tabs .nav-link.active:before {
+    background-color: transparent;
+    border-bottom-color: $blue;
+    opacity: 1; 
+}
+.nav-tabs .nav-item,
+ul.nav-tabs > li {
+    position: relative;
+    margin-bottom: -$nav-tabs-border-width;
 }
 .nav-tabs .nav-link,
 .nav-tabs .nav-link.active {
     color: #222222;
 }
-.nav-pills .nav-item:not(.show) .nav-link:not(.disabled):not(.active) {
-    color: $primary;
+.nav-tabs .nav-link,
+.nav-pills .nav-link {
+    outline: none;
+}
+.nav-pills .nav-item:not(.show) > .nav-link:not(.active):hover {
+    background-color: $gray-200;
+}
+.nav-pills .nav-item:not(.show) > .nav-link:not(.active):focus {
+    background-color: $gray-300;
 }
 
 
