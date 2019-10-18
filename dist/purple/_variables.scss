@@ -65,9 +65,12 @@ $card-border-radius: $theme-border-radius-sm;
 
 $custom-checkbox-indicator-border-radius: $theme-border-radius-xs;
 $custom-control-indicator-bg-size: 100% 100%;
-$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-2 -2 12 12'><path fill='#ffffff' d='M7,1L3,5L1,3L0,4l3,3l5-5L7,1z'/></svg>");
-$custom-radio-indicator-icon-checked: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3.3' fill='#ffffff'/><circle r='2.3' fill='#{$blue}'/></svg>");
-$custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><rect x='2.5' y='2.5' width='3' height='3' fill='#ffffff'/></svg>");
+//$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-2 -2 12 12'><path fill='#ffffff' d='M7,1L3,5L1,3L0,4l3,3l5-5L7,1z'/></svg>");
+//$custom-radio-indicator-icon-checked: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3.3' fill='#ffffff'/><circle r='2.3' fill='#{$blue}'/></svg>");
+//$custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><rect x='2.5' y='2.5' width='3' height='3' fill='#ffffff'/></svg>");
+$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy0yIC0yIDEyIDEyJz48cGF0aCBmaWxsPScjZmZmZmZmJyBkPSdNNywxTDMsNUwxLDNMMCw0bDMsM2w1LTVMNywxeicvPjwvc3ZnPg==");
+$custom-radio-indicator-icon-checked: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy00IC00IDggOCc+PGNpcmNsZSByPSczLjMnIGZpbGw9JyNmZmZmZmYnLz48Y2lyY2xlIHI9JzIuMycgZmlsbD0nIzc5ODlmZicvPjwvc3ZnPg==");
+$custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA4IDgnPjxyZWN0IHg9JzIuNScgeT0nMi41JyB3aWR0aD0nMycgaGVpZ2h0PSczJyBmaWxsPScjZmZmZmZmJy8+PC9zdmc+");
 
 
 // Dropdowns

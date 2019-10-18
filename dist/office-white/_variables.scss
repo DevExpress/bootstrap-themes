@@ -62,9 +62,12 @@ $card-border-radius: $theme-border-radius;
 $custom-control-indicator-size: 1.25rem;
 $custom-checkbox-indicator-border-radius: $theme-border-radius;
 $custom-control-indicator-bg-size: 100% 100%;
-$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-2 -2 12 12'><path fill='#ffffff' d='M7,1L3,5L1,3L0,4l3,3l5-5L7,1z'/></svg>");
-$custom-radio-indicator-icon-checked: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2.3' fill='#{$blue}'/></svg>");
-$custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><rect x='2' y='2' width='4' height='4' fill='#ffffff'/></svg>");
+//$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-2 -2 12 12'><path fill='#ffffff' d='M7,1L3,5L1,3L0,4l3,3l5-5L7,1z'/></svg>");
+//$custom-radio-indicator-icon-checked: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2.3' fill='#{$blue}'/></svg>");
+//$custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><rect x='2' y='2' width='4' height='4' fill='#ffffff'/></svg>");
+$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy0yIC0yIDEyIDEyJz48cGF0aCBmaWxsPScjZmZmZmZmJyBkPSdNNywxTDMsNUwxLDNMMCw0bDMsM2w1LTVMNywxeicvPjwvc3ZnPg==");
+$custom-radio-indicator-icon-checked: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy00IC00IDggOCc+PGNpcmNsZSByPScyLjMnIGZpbGw9JyNmZTcxMDknLz48L3N2Zz4=");
+$custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA4IDgnPjxyZWN0IHg9JzInIHk9JzInIHdpZHRoPSc0JyBoZWlnaHQ9JzQnIGZpbGw9JyNmZmZmZmYnLz48L3N2Zz4=");
 
 
 // Dropdowns
