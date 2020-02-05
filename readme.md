@@ -42,7 +42,7 @@ This repository contains free and open source themes that were created for websi
 
 ## Getting Started
 
-The [/dist/](dist) folder includes nested folders whose names correspond to theme names: [blazing-berry](dist/blazing-berry), [office-white](dist/office-white), and [purple](dist/office-white). Each nested folder contains the following theme-related files:
+The [/dist/](dist) folder includes nested folders whose names correspond to theme names: [blazing-berry](dist/blazing-berry), [office-white](dist/office-white), and [purple](dist/purple). Each nested folder contains the following theme-related files:
 
 1) Theme stylesheets that you can apply to your application. 
 * **bootstrap.css** - a ready-to-use CSS file.
@@ -69,7 +69,7 @@ This creates two new CSS files (**bootstrap.css** and **bootstrap.min.css**) in 
 
 ## Copyright and License
 
-Copyright © 2020 [Developer Express Inc.](https://devexpress.com/) All trademarks or registered trademarks are property of their respective owners. 
+Copyright © 2018-2020 [Developer Express Inc.](https://devexpress.com/) All trademarks or registered trademarks are property of their respective owners. 
 This project code is released under the [MIT License](LICENSE).
 
 ## More Information
