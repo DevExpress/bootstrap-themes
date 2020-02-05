@@ -1,4 +1,4 @@
-var themes = ["purple", "office-white"];
+var themes = ["purple", "office-white", "blazing-berry"];
 
 var gulp  = require('gulp'),
   sass = require('gulp-sass'),
@@ -67,5 +67,4 @@ gulp.task('attachHtml', (cb) => {
 });
 gulp.task('default', gulp.series(themes.map(theme => "compile-" + theme))); 
 gulp.task('watch', gulp.series('default', 'connect', 'attachHtml', 'attachScss'));
-
 

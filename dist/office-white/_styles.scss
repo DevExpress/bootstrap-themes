@@ -26,6 +26,12 @@
 .breadcrumb {
     font-size: 1rem;
 }
+.breadcrumb-item a {
+	color: #444444;
+}
+.breadcrumb-item a:hover {
+	color: darken(#444444, 15%);
+}
 
 
 // Buttons + Forms
@@ -40,14 +46,14 @@
     }
 }
 .btn-outline-secondary {
-    @include button-outline-variant($link-color);
+    @include button-outline-variant(#444444);
 }
 .btn-secondary:focus:not(:disabled):not(.disabled),
 .btn-secondary.focus:not(:disabled):not(.disabled) {
   @if $enable-shadows {
-    box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba($link-color, .2)!important;
+    box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(#444444, .2)!important;
   } @else {
-    box-shadow: 0 0 0 $btn-focus-width rgba($link-color, .2)!important;
+    box-shadow: 0 0 0 $btn-focus-width rgba(#444444, .2)!important;
   }
 }
 .btn.dropdown-toggle {
@@ -103,6 +109,31 @@
     }
 }
 
+// Switches
+
+.custom-switch .custom-control-label::after {
+	border-radius: 50%;
+	top: calc(.035rem + 4px);
+	left: calc(-3rem + 4px);
+	background-color: #000;
+}
+.custom-switch .custom-control-label::before {
+	border-color:  #000;
+}
+.custom-switch .custom-control-input:checked:disabled~.custom-control-label::before,
+.custom-switch .custom-control-input:disabled~.custom-control-label::before {
+	background-color: #444444;
+	border-color: #444444;
+	opacity: 0.2;
+}
+.custom-switch .custom-control-input:focus:not(:checked)~.custom-control-label::before {
+	border-color:  #000;
+}
+.custom-switch .custom-control-input:checked:disabled~.custom-control-label::after,
+.custom-switch .custom-control-input:disabled~.custom-control-label::after {
+	background-color: #444444;
+	opacity: 0.3;
+}
 
 // Forms
 
@@ -174,6 +205,7 @@ ul.nav-tabs > li {
 }
 
 
+
 // Pagination
 
 .pagination {
@@ -187,4 +219,25 @@ ul.nav-tabs > li {
 }
 .pagination-lg .page-link {
     font-size: 1.1rem;
+}
+
+// DX
+
+.dx-blazor-tagbox .dx-blazor-tag .btn.dxbs-cmd-btn.dxbs-tag-remove-btn {
+	&:not(:focus):not(:hover) {
+		color: #737373 !important;
+	}
+	
+	&:focus,
+	&:hover {
+		color: #fff !important;
+		&:before {
+			opacity: 1;
+			background-color: $blue;
+			width: calc(100% + .6em + .2rem);
+			height: calc(100% + .6em + .2rem);
+			left: calc(-.3em - .1rem);
+			top: calc(-.3em - .1rem);
+		}
+	}
 }

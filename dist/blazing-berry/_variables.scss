@@ -1,0 +1,84 @@
+$black: #222;
+$blue: #5f368d;
+$cyan: #00a9e6;
+$gray-100: #ececec;
+$gray-600: #888;
+
+$font-size-base: 0.875rem;
+
+$border-radius: .2rem;
+$border-radius-sm: .15rem;
+
+$theme-box-shadow-sm: 0px 1px 4px 0px rgba(0,0,0,0.2) !default;
+
+// Alert
+
+$alert-border-radius: .25rem;
+
+// Badges
+
+$badge-font-size: 80%;
+
+// Breadcrumb
+
+$breadcrumb-divider-color: #716d78;
+$breadcrumb-active-color: #716d78;
+$breadcrumb-item-padding: .75rem;
+
+// Buttons
+
+$btn-box-shadow: $theme-box-shadow-sm;
+$btn-active-box-shadow: $theme-box-shadow-sm;
+
+// Cards
+
+$card-border-radius: .25rem;
+$card-spacer-x: 1.25rem;
+$card-border-color: rgba(34,34,34,.125);
+
+// Dropdowns
+
+$dropdown-border-radius: .25rem;
+
+// Forms
+
+$custom-control-indicator-size: 1.25rem;
+$custom-control-indicator-bg-size: 100% 100%;
+$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-2 -2 12 12'%3e%3cpath fill='%23fff' d='M7,1L3,5L1,3L0,4l3,3l5-5L7,1z'/%3e%3c/svg%3e");
+$custom-radio-indicator-icon-checked: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%%3ccircle r='2.3' fill='%23fff'/%3e%3c/svg%3e");
+$custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3crect x='2' y='2' width='4' height='4' fill='%23fff'/%3e%3c/svg%3e");
+
+// Jumbotron
+
+$jumbotron-bg: #F9F8FC;
+
+// List groups
+
+$list-group-border-radius: .25rem;
+
+// Navs
+
+$nav-tabs-border-radius: 0;
+$nav-tabs-link-active-border-color: $blue;
+
+// Progress bars
+
+$progress-border-radius: .5rem;
+
+// Switches
+
+$custom-switch-width: 1.875rem;
+$custom-switch-indicator-size: 1.25rem;
+
+// Tables
+
+$table-cell-padding: .5rem;
+$table-cell-padding-sm: .25rem;
+
+// Thumbnail
+
+$thumbnail-border-radius: .25rem;
+
+// Tooltips
+
+$tooltip-border-radius: .25rem;
