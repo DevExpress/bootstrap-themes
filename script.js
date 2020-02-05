@@ -4,7 +4,8 @@ var dx = dx || {};
     var themes = {};
     themes["purple"] = { folder: "purple", title: "Purple" };
     themes["office-white"] = { folder: "office-white", title: "Office White" };
-
+    themes["blazing-berry"] = { folder: "blazing-berry", title: "Blazing Berry" };
+	
     $('body').scrollspy({ target: '#scrollspy', offset: 90 });
 
     $('[data-toggle="popover"]').popover();

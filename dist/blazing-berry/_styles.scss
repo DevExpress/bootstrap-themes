@@ -1,0 +1,225 @@
+// Buttons
+
+@each $color, $value in $theme-colors {
+    .btn-#{$color},
+	.btn-#{$color}.disabled,
+	.btn-#{$color}:disabled, {
+		box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
+    }
+}
+.btn-secondary.disabled,
+.btn-secondary:disabled,
+.btn-secondary {
+	color: #212529;
+    background-color: #fff;
+    border-color: #fff;
+}
+.btn-secondary:not(:disabled):not(.disabled):hover {
+	color: #212529;
+    background-color: #ececec;
+    border-color: #e6e6e6;
+}
+.btn-secondary:focus:not(:disabled):not(.disabled),
+.btn-secondary.focus:not(:disabled):not(.disabled) {
+  @if $enable-shadows {
+    box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(#444444, .2)!important;
+  } @else {
+    box-shadow: 0 0 0 $btn-focus-width rgba(#444444, .2)!important;
+  }
+}
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show>.btn-secondary.dropdown-toggle {
+	color: #212529;
+    background-color: #e6e6e6;
+    border-color: #dfdfdf;
+}
+.btn-outline-secondary {
+	color: #686868;
+	border-color: #d7d8d9;
+}
+
+// Breadcrumb
+
+.breadcrumb {
+	font-weight: 500;
+}
+.breadcrumb-item a {
+	color: #716d78;
+}
+.breadcrumb-item a:not(.active):hover {
+	position: relative;
+	transform: scale(1);
+	text-decoration: none;
+}
+.breadcrumb-item a:not(.active):hover:before {
+	content: " ";
+    position: absolute;
+    z-index: -1;
+    width: calc(1rem + 100%);
+    height: calc(.5rem + 100%);
+    background-color: #000;
+    left: -0.5rem;
+    top: -0.25rem;
+    opacity: 0.05;
+	border-radius: .2rem;
+}
+
+// Card
+
+.card-header {
+	font-size: 1rem;
+	font-weight: 500;
+	margin-bottom: 0;
+	background-color: rgba(34,34,34,.03);
+	border-bottom: 1px solid rgba(34,34,34,.125);
+	padding: .5rem 1.25rem;
+}
+.card-body {
+	padding: 0.75rem 1.25rem;
+}
+.card-footer {
+	padding: .5rem 1.25rem;
+}
+
+// Forms
+
+.input-group > .input-group-prepend > .btn,
+.input-group > .input-group-append > .btn {
+  box-shadow: none !important;
+}
+.input-group > .input-group-prepend > .btn-secondary,
+.input-group > .input-group-append > .btn-secondary {
+  border-color: $input-border-color !important;
+}
+
+// List group
+
+.list-group {
+	border-radius: .25rem;
+}
+
+// Modal
+
+.modal-header {
+	font-size: 1rem;
+	font-weight: 500;
+}
+.modal-header,
+.modal-footer {
+	padding: .5rem 1rem;
+}
+
+// Navs
+
+.nav-tabs .nav-link {
+    border-width: 0 0 3px 0;
+}
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link.active:hover,
+.nav-tabs .nav-link.active:focus {
+	border-color: #5f368d;
+}
+
+// Switches
+
+.custom-switch .custom-control-label::after {
+	border-radius: 50%;
+	top: 0.1rem;
+	left: -2.375rem;
+}
+.custom-switch .custom-control-label::before {
+	height: 0.875rem;
+	top: calc(.16rem + 2px);
+	background-color: #000;
+	border-color:  #000;
+	opacity: 0.3;
+}
+.custom-switch .custom-control-input:checked:disabled~.custom-control-label::before,
+.custom-switch .custom-control-input:disabled~.custom-control-label::before {
+	background-color: #000;
+	border-color:  #000;
+	opacity: 0.1;
+}
+.custom-switch .custom-control-input:checked:disabled~.custom-control-label::after,
+.custom-switch .custom-control-input:disabled~.custom-control-label::after {
+	background-color: #eeeeee!important;
+}
+.custom-switch .custom-control-input:focus:not(:checked)~.custom-control-label::before {
+	border-color:  #000;
+	opacity: 0.3;
+}
+.custom-switch .custom-control-label::after {
+	box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.3);
+	background-color: #fff;
+}
+.custom-switch .custom-control-input:checked~.custom-control-label::after {
+	background-color: #5f368d;;
+}
+
+// Tables
+
+th {
+	font-weight: 500;
+	font-size: 0.875rem;
+}
+.table-sm,
+.table-sm td,
+.table-sm th {
+    font-size: 13px;
+}
+
+// DX
+
+.form-control[readonly]:not([disabled]).dx-reset-readonly-style {
+	background-color: $input-bg;
+}
+
+.dxbs-gridview {
+	font-size: 13px;
+	
+	& > .card > .card-header,
+	& > .card-header,
+	& > .card > .card-body,
+	& > .card-body,
+	& > .card > .card-footer,
+	& > .card-footer {
+		padding: 6px;
+	}
+	
+	& > .card > .card-body.dxbs-pager > .card-body {
+		padding-bottom: 0!important;
+	}
+	
+	.dxbs-fixed-header-content > button.btn.btn-link,
+	.dxbs-grid-edit-form .dxbs-fl-ctrl > button.btn.btn-link,
+	.dxbs-cmd-cell > button.btn.btn-link {
+		font-size: 13px;
+	}
+}
+
+.dxbs-fl.form-horizontal > .row:first-child {
+    margin-top: .5rem;
+}
+.dxbs-fl .form-group {
+	margin-bottom: .5rem;
+}
+
+.dx-blazor-tagbox .dx-blazor-tag .btn.dxbs-cmd-btn.dxbs-tag-remove-btn {
+	&:not(:focus):not(:hover) {
+		color: #737373 !important;
+	}
+	
+	&:focus,
+	&:hover {
+		color: #fff !important;
+		&:before {
+			opacity: 1;
+			background-color: $blue;
+			width: calc(100% + .6em + .2rem);
+			height: calc(100% + .6em + .2rem);
+			left: calc(-.3em - .1rem);
+			top: calc(-.3em - .1rem);
+		}
+	}
+}

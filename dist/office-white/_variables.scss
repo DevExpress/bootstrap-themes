@@ -16,9 +16,9 @@ $gray-900: #212529;
 
 $secondary: #ffffff;
 
-$link-color: #444444;
+$link-color: #ff6c00;
 
-$font-family-sans-serif: "Segoe UI", "Roboto", "Helvetica Neue", "-apple-system", "BlinkMacSystemFont", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif: "Segoe UI", "Roboto", "Helvetica Neue", "-apple-system", "BlinkMacSystemFont", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-size-base: 0.88rem;
 
 $enable-shadows: true;
@@ -62,13 +62,14 @@ $card-border-radius: $theme-border-radius;
 $custom-control-indicator-size: 1.25rem;
 $custom-checkbox-indicator-border-radius: $theme-border-radius;
 $custom-control-indicator-bg-size: 100% 100%;
-//$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-2 -2 12 12'><path fill='#ffffff' d='M7,1L3,5L1,3L0,4l3,3l5-5L7,1z'/></svg>");
-//$custom-radio-indicator-icon-checked: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2.3' fill='#{$blue}'/></svg>");
-//$custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><rect x='2' y='2' width='4' height='4' fill='#ffffff'/></svg>");
 $custom-checkbox-indicator-icon-checked: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy0yIC0yIDEyIDEyJz48cGF0aCBmaWxsPScjZmZmZmZmJyBkPSdNNywxTDMsNUwxLDNMMCw0bDMsM2w1LTVMNywxeicvPjwvc3ZnPg==");
 $custom-radio-indicator-icon-checked: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy00IC00IDggOCc+PGNpcmNsZSByPScyLjMnIGZpbGw9JyNmZTcxMDknLz48L3N2Zz4=");
 $custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA4IDgnPjxyZWN0IHg9JzInIHk9JzInIHdpZHRoPSc0JyBoZWlnaHQ9JzQnIGZpbGw9JyNmZmZmZmYnLz48L3N2Zz4=");
 
+// Switches
+
+$custom-switch-width: 2.5rem;
+$custom-switch-indicator-size: 0.75rem;
 
 // Dropdowns
 
@@ -129,10 +130,11 @@ $nav-divider-margin-y: 0.25rem;
 
 // Pagination
 
+$pagination-color: #444444;
+$pagination-hover-color: darken($pagination-color, 15%);
 $pagination-padding-x: 0.88rem;
 $pagination-padding-x-sm: 0.6rem;
 $pagination-padding-x-lg: 1.4rem;
-
 
 // Popovers
 

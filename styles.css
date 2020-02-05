@@ -37,6 +37,7 @@ body{
     left:auto;
     bottom:auto;
     z-index:1;
+    overflow: visible;
 }
 .component-example .modal-dialog {
     width:90%;
