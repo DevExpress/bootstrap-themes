@@ -38,6 +38,22 @@
 	color: #686868;
 	border-color: #d7d8d9;
 }
+.btn-group,
+.btn-group-vertical {
+    .btn + .btn,
+    .btn + .btn-group,
+    .btn-group + .btn,
+    .btn-group + .btn-group {
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+.btn-group > .btn:not(.btn-link):not(:active):not(:focus):not(:hover):not(:first-child) {
+    clip-path: inset(-3px -4px -5px -1px);
+}
+.btn-group-vertical > .btn:not(.btn-link):not(:active):not(:focus):not(:first-child) {
+    clip-path: inset(-3px -4px -5px -4px);
+}
 
 // Breadcrumb
 
