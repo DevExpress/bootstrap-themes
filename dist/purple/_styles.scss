@@ -366,3 +366,28 @@ select.form-control > option:checked,
 	}
 }
 
+// ListBox
+
+.dxbs-listbox {
+	&.form-control{
+		background-color: #fff;
+		border-top: 1px solid rgba(0, 0, 0, 0.125);
+		border-left: 1px solid rgba(0, 0, 0, 0.125);
+		border-right: 1px solid rgba(0, 0, 0, 0.125);
+		
+		&:focus{
+			border-top-color: rgba(0, 0, 0, 0.125)!important;
+			border-left-color: rgba(0, 0, 0, 0.125)!important;
+			border-right-color: rgba(0, 0, 0, 0.125)!important;
+		}
+	}
+	&.form-control.card{
+		border-bottom-color: rgba(0, 0, 0, 0.3);
+		border-bottom-width: 2px;
+		border-radius: 0;
+	}
+	&.card,
+	& .card{
+		box-shadow: none;
+	}
+}
