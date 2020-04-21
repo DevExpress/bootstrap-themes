@@ -241,3 +241,17 @@ ul.nav-tabs > li {
 		}
 	}
 }
+
+// ComboBox
+
+.dxbs-dropdown-edit.dxbs-combobox > .input-group > .input-group-append > .dxbs-edit-btn{
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-radius: 0px!important;
+	margin: 1px 1px 1px 0px;
+	height: calc(1.5em + 0.75rem);
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+   	padding-top: 0.5rem;
+}

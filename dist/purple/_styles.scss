@@ -391,3 +391,25 @@ select.form-control > option:checked,
 		box-shadow: none;
 	}
 }
+
+// ComboBox
+
+.dxbs-dropdown-edit.dxbs-combobox > .input-group{
+	&> .input-group-append{
+		&> .dxbs-edit-btn {
+			border-bottom: none;
+			height: calc(1.5em + .75rem + 2px);
+			background-color: rgba(0,0,0,0);
+			
+			&:hover{
+				background-color: rgba(0,0,0,0.08);
+			}
+			&:active {
+				border-bottom: none;
+			}
+		}
+	}
+	&> .dxbs-input-cntr > input.form-control {
+		padding-right: calc(0.6em + 1.6rem + 0.6rem);
+	}
+}
