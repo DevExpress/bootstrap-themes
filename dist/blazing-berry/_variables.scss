@@ -11,7 +11,10 @@ $font-size-sm: 0.75rem;
 $border-radius: .2rem;
 $border-radius-sm: .15rem;
 
+// Custom Variables
+
 $theme-box-shadow-sm: 0px 1px 4px 0px rgba(0,0,0,0.2) !default;
+$theme-box-shadow-lg: 0px 2px 6px 0px rgba(0,0,0,0.3) !default;
 
 // Alert
 
@@ -66,6 +69,11 @@ $list-group-item-padding-y: 9.5px;
 
 $nav-tabs-border-radius: 0;
 $nav-tabs-link-active-border-color: $blue;
+
+// Modals
+
+$modal-content-box-shadow-xs: $theme-box-shadow-lg;
+$modal-content-box-shadow-sm-up: $theme-box-shadow-lg;
 
 // Progress bars
 

@@ -227,6 +227,11 @@
 
 // Modal
 
+@if not $enable-shadows {
+	.modal-content {
+		box-shadow: $theme-box-shadow-lg;
+	}
+}
 .modal-header {
 	font-size: 1rem;
 	font-weight: 500;
