@@ -324,6 +324,14 @@ th {
 	}
 }
 
+.dx-dragging-state {
+	&,
+	.dxbs-fixed-header-content > button.btn.btn-link,
+	.dxbs-cmd-cell > button.btn.btn-link {
+		font-size: 13px;
+	}
+}
+
 .dxbs-fl.form-horizontal > .row:first-child {
     margin-top: .5rem;
 }
