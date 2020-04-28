@@ -40,19 +40,129 @@
 }
 .btn-group,
 .btn-group-vertical {
-    .btn + .btn,
-    .btn + .btn-group,
-    .btn-group + .btn,
-    .btn-group + .btn-group {
-        margin-left: 0;
-        margin-top: 0;
+	box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.2);
+	border-radius: $border-radius;
+	&.btn-group-sm {
+		border-radius: $border-radius-sm;
     }
+	&.btn-group-lg {
+		border-radius: $border-radius-lg;
+	}
+	
+	.btn-group,
+	.btn-group-vertical	{
+		box-shadow: none;
+	}
+	.btn:not(:focus) {
+		box-shadow: none !important;
+	}
+	.btn:disabled,
+	.btn.disabled:hover,
+	.btn.disabled:focus {
+		z-index: auto;
+	}
+	.btn-secondary:not(.active):not(:active):not(.disabled):not(disabled):hover {
+		border-color: transparent;
+	}
 }
-.btn-group > .btn:not(.btn-link):not(:active):not(:focus):not(:hover):not(:first-child) {
-    clip-path: inset(-3px -4px -5px -1px);
+@mixin btn-left-divider($color) {
+	position: relative;
+	&:not(.active):not(:active) {
+		&:before {
+			content: "";
+			position: absolute;
+			top: -$btn-border-width;
+			left: -1px;
+			height: calc(100% + 2 * #{$btn-border-width}); 
+			width: $btn-border-width;
+			background-color: $color;
+		}
+	}
 }
-.btn-group-vertical > .btn:not(.btn-link):not(:active):not(:focus):not(:first-child) {
-    clip-path: inset(-3px -4px -5px -4px);
+@mixin btn-right-divider($color) {
+	position: relative;
+	&:not(.active):not(:active) {
+		&:not(.dropdown-toggle):after {
+			content: "";
+			position: absolute;
+			top: -$btn-border-width;
+			right: -1px;
+			height: calc(100% + 2 * #{$btn-border-width}); 
+			width: $btn-border-width;
+			background-color: $color;
+		}
+	}
+}
+@mixin btn-top-divider($color) {
+	position: relative;
+	&:not(.active):not(:active):before {
+		content: "";
+		position: absolute;
+		top: -1px;
+		left: -$btn-border-width;
+		height: 1px;
+		width: calc(100% + 2 * #{$btn-border-width});
+		background-color: $color;
+	}
+}
+@mixin btn-bottom-divider($color) {
+	position: relative;
+	&:not(.dropdown-toggle):after {
+		content: "";
+		position: absolute;
+		bottom: -1px;
+		left: -$btn-border-width;
+		height: 1px;
+		width: calc(100% + 2 * #{$btn-border-width});
+		background-color: $color;
+}
+}
+
+.btn-group {
+	@each $color, $value in $theme-colors {
+		@if $color == "secondary" {
+			& > .btn-secondary:not(:first-child),
+			& > .btn-group:not(:first-child) > .btn-secondary:first-child {
+				@include btn-left-divider(#eaeaea);
+			}
+			& > .btn-secondary:not(:last-child),
+			& > .btn-group:not(:last-child) > .btn-secondary:last-child {
+				@include btn-right-divider(#eaeaea);
+			}
+		} @else {
+			& > .btn-#{$color}:not(:first-child),
+			& > .btn-group:not(:first-child) > .btn-#{$color}:first-child {
+				@include btn-left-divider(darken($value, 7.5%));
+			}
+			& > .btn-#{$color}:not(:last-child),
+			& > .btn-group:not(:last-child) > .btn-#{$color}:last-child {
+				@include btn-right-divider(darken($value, 7.5%));
+			}
+		} 
+	}
+}
+.btn-group-vertical {
+	@each $color, $value in $theme-colors {
+		@if $color == "secondary" {
+			& > .btn-secondary:not(:first-child),
+			& > .btn-group-vertical:not(:first-child) > .btn-secondary:first-child {
+				@include btn-top-divider(#eaeaea);
+			}
+			& > .btn-secondary:not(:last-child),
+			& > .btn-group-vertical:not(:last-child) > .btn-secondary:last-child {
+				@include btn-bottom-divider(#eaeaea);
+			}
+		} @else {
+			& > .btn-#{$color}:not(:first-child),
+			& > .btn-group-vertical:not(:first-child) > .btn-#{$color}:first-child {
+				@include btn-top-divider(darken($value, 7.5%));
+			}
+			& > .btn-#{$color}:not(:last-child),
+			& > .btn-group-vertical:not(:last-child) > .btn-#{$color}:last-child {
+				@include btn-bottom-divider(darken($value, 7.5%));
+			}
+		} 
+	}
 }
 
 // Breadcrumb
@@ -117,6 +227,11 @@
 
 // Modal
 
+@if not $enable-shadows {
+	.modal-content {
+		box-shadow: $theme-box-shadow-lg;
+	}
+}
 .modal-header {
 	font-size: 1rem;
 	font-weight: 500;
@@ -214,6 +329,14 @@ th {
 	}
 }
 
+.dx-dragging-state {
+	&,
+	.dxbs-fixed-header-content > button.btn.btn-link,
+	.dxbs-cmd-cell > button.btn.btn-link {
+		font-size: 13px;
+	}
+}
+
 .dxbs-fl.form-horizontal > .row:first-child {
     margin-top: .5rem;
 }
@@ -238,4 +361,8 @@ th {
 			top: calc(-.3em - .1rem);
 		}
 	}
+}
+
+.dxbs-focus-hidden .btn-secondary:focus:not(:disabled):not(.disabled) {
+	box-shadow: none !important;
 }
