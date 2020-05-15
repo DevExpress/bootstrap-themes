@@ -344,10 +344,10 @@ ul.nav-tabs > li {
 		&:before {
 			opacity: 1;
 			background-color: $blue;
-			width: calc(100% + .6em + .2rem);
-			height: calc(100% + .6em + .2rem);
-			left: calc(-.3em - .1rem);
-			top: calc(-.3em - .1rem);
+			width: calc(100% + .816em);
+			height: calc(100% + .816em);
+			left: -.408em;
+			top: -.408em;
 		}
 	}
 }
