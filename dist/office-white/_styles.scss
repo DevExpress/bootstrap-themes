@@ -334,6 +334,16 @@ ul.nav-tabs > li {
 // DX
 
 .dx-blazor-tagbox .dx-blazor-tag .btn.dxbs-cmd-btn.dxbs-tag-remove-btn {
+	@mixin child-outside($offset) {
+		&:before {
+			@content;
+			width: calc(100% + #{2 * $offset});
+			height: calc(100% + #{2 * $offset});
+			left: -$offset;
+			top: -$offset;
+		}
+	}
+	
 	&:not(:focus):not(:hover) {
 		color: #737373 !important;
 	}
@@ -341,14 +351,15 @@ ul.nav-tabs > li {
 	&:focus,
 	&:hover {
 		color: #fff !important;
-		&:before {
+		@include child-outside(.408em) {
 			opacity: 1;
 			background-color: $blue;
-			width: calc(100% + .816em);
-			height: calc(100% + .816em);
-			left: -.408em;
-			top: -.408em;
-		}
+		}		
+	}
+	
+	&.btn-sm:focus,
+	&.btn-sm:hover {
+		@include child-outside(.204em);	
 	}
 }
 
