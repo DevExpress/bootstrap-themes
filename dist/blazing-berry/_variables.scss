@@ -6,7 +6,7 @@ $gray-600: #888;
 
 $font-size-base: 0.875rem;
 $font-size-lg: 1.125rem;
-$font-size-sm: 0.75rem;
+$font-size-sm: 0.8125rem;
 
 $border-radius: .2rem;
 $border-radius-sm: .15rem;
@@ -50,6 +50,8 @@ $dropdown-item-padding-x: 1rem;
 
 $input-btn-padding-y: .40625rem;
 $input-btn-padding-y-lg: .65625rem;
+$input-btn-padding-y-sm: .203125rem;
+$btn-padding-y-sm: .2195rem;
 $custom-control-indicator-size: 1.25rem;
 $custom-control-indicator-bg-size: 100% 100%;
 $custom-checkbox-indicator-icon-checked: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-2 -2 12 12'%3e%3cpath fill='%23fff' d='M7,1L3,5L1,3L0,4l3,3l5-5L7,1z'/%3e%3c/svg%3e");
@@ -74,6 +76,10 @@ $nav-tabs-link-active-border-color: $blue;
 
 $modal-content-box-shadow-xs: $theme-box-shadow-lg;
 $modal-content-box-shadow-sm-up: $theme-box-shadow-lg;
+
+// Pagination
+
+$pagination-padding-y-sm: .2195rem;
 
 // Progress bars
 
