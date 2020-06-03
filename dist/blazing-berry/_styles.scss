@@ -297,7 +297,7 @@ th {
 .table-sm,
 .table-sm td,
 .table-sm th {
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 // DX
@@ -307,7 +307,7 @@ th {
 }
 
 .dxbs-gridview {
-	font-size: 13px;
+	font-size: 0.8125rem;
 	
 	& > .card > .card-header,
 	& > .card-header,
@@ -325,7 +325,7 @@ th {
 	.dxbs-fixed-header-content > button.btn.btn-link,
 	.dxbs-grid-edit-form .dxbs-fl-ctrl > button.btn.btn-link,
 	.dxbs-cmd-cell > button.btn.btn-link {
-		font-size: 13px;
+		font-size: 0.8125rem;
 	}
 }
 
@@ -333,7 +333,7 @@ th {
 	&,
 	.dxbs-fixed-header-content > button.btn.btn-link,
 	.dxbs-cmd-cell > button.btn.btn-link {
-		font-size: 13px;
+		font-size: 0.8125rem;
 	}
 }
 
