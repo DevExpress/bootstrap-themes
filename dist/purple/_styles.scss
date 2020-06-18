@@ -495,6 +495,74 @@ select.form-control > option:checked,
 	}
 }
 
-.dxbs-focus-hidden .btn-secondary:focus:not(:disabled):not(.disabled) {
-	box-shadow: none !important;
+.dxbs-focus-hidden {
+	@each $color, $value in $theme-colors {
+		.btn-#{$color} {
+			&:focus,
+			&.focus {
+				color: color-yiq($value);
+				@include gradient-bg($value);
+				border-color: $value;
+				@if $color == "secondary" {
+					&,
+					&:not(:disabled):not(.disabled) {
+						@if $enable-shadows {
+							box-shadow: $btn-box-shadow !important;
+						}
+						@else {
+							box-shadow: none !important;
+						}
+					}
+				}
+				@else {
+					@if $enable-shadows {
+						box-shadow: $btn-box-shadow !important;
+					}
+					@else {
+						box-shadow: none !important;
+					}
+				}
+			}
+		}
+		.btn-outline-#{$color} {
+			&:focus,
+			&.focus {
+				box-shadow: none !important;
+			}
+		}
+		.btn-group,
+		.btn-group-vertical,
+		.input-group > .input-group-prepend,
+		.input-group > .input-group-append {
+			.btn-#{$color} {
+				&:focus,
+				&.focus {
+					box-shadow: none !important;
+					
+					@if $color == "secondary" {
+						&:not(:disabled):not(.disabled) {
+							box-shadow: none !important;
+						}
+					}
+				}
+			}
+		}
+		.input-group > .input-group-prepend,
+		.input-group > .input-group-append {
+			& > .btn-#{$color} {
+				&:focus,
+				&.focus {
+					border-color: $input-border-color;
+					background-color: $input-bg;
+				}
+			}
+		}
+	}
+	.btn-link {
+		&:focus,
+		&.focus {
+			box-shadow: none !important;
+			text-decoration: none;
+		}
+	}
 }
