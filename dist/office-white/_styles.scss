@@ -368,8 +368,10 @@ ul.nav-tabs > li {
 		.btn-#{$color} {
 			&:focus,
 			&.focus {
-				color: color-yiq($value);
-				@include gradient-bg($value);
+				&:not(:hover):not(.hover) {
+					color: color-yiq($value);
+					@include gradient-bg($value);
+				}
 				border-color: $value;
 				@if $color == "secondary" {
 					&,
