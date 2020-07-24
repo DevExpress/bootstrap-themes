@@ -384,15 +384,19 @@ th {
 			&:focus,
 			&.focus {
 				@if $color == "secondary" {
-					color: #212529;
-					background-color: #fff;
+					&:not(:hover):not(.hover) {
+						color: #212529;
+						background-color: #fff;
+					}
 					border-color: #fff;
 					&:not(:disabled):not(.disabled) {
 						box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2) !important;
 					}
 				} @else {
-					color: color-yiq($value);
-					@include gradient-bg($value);
+					&:not(:hover):not(.hover) {
+						color: color-yiq($value);
+						@include gradient-bg($value);
+					}
 					border-color: $value;
 				}
 				box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2) !important;
