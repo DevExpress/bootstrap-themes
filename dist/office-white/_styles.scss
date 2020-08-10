@@ -247,6 +247,11 @@
 
 // Forms
 
+.input-group > .input-group-prepend > .btn-secondary,
+.input-group > .input-group-append > .btn-secondary {
+  border-color: $input-border-color !important;
+}
+
 .form-control:focus {
     border-color: $blue!important;
 }
