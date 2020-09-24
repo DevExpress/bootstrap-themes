@@ -440,3 +440,11 @@ ul.nav-tabs > li {
 		}
 	}
 }
+
+.dxbs-menu {
+    .dropdown-menu.dx-dropdown-menu {
+		border: 1px solid #e3e3e3;
+		border-radius: 2px;
+		box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.18);
+    }
+}
