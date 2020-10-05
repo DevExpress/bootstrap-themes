@@ -62,21 +62,23 @@
 
 .btn-group,
 .btn-group-vertical {
-	box-shadow: $theme-box-shadow-sm;
-	border-radius: $border-radius;
-	&.btn-group-sm {
-		border-radius: $border-radius-sm;
-    }
-	&.btn-group-lg {
-		border-radius: $border-radius-lg;
-	}
-	
-	.btn-group,
-	.btn-group-vertical	{
-		box-shadow: none;
-	}
-	.btn:not(:focus) {
-		box-shadow: none !important;
+	&:not(.dxbs-toolbar-search-group) {
+		box-shadow: $theme-box-shadow-sm;
+		border-radius: $border-radius;
+		&.btn-group-sm {
+			border-radius: $border-radius-sm;
+		}
+		&.btn-group-lg {
+			border-radius: $border-radius-lg;
+		}
+		
+		.btn-group,
+		.btn-group-vertical	{
+			box-shadow: none;
+		}
+		.btn:not(:focus) {
+			box-shadow: none !important;
+		}
 	}
 	.btn:disabled,
 	.btn.disabled:hover,
