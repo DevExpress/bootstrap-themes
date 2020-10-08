@@ -62,7 +62,7 @@
 
 .btn-group,
 .btn-group-vertical {
-	&:not(.dxbs-toolbar-search-group) {
+	&:not(.dxbs-toolbar-search-group):not(.dxbs-ta-ag) {
 		box-shadow: $theme-box-shadow-sm;
 		border-radius: $border-radius;
 		&.btn-group-sm {
