@@ -384,7 +384,7 @@ th {
 			&:focus,
 			&.focus {
 				@if $color == "secondary" {
-					&:not(:hover):not(.hover) {
+					&:not(:hover):not(.hover):not(:active):not(.active) {
 						color: #212529;
 						background-color: #fff;
 					}
@@ -393,7 +393,7 @@ th {
 						box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2) !important;
 					}
 				} @else {
-					&:not(:hover):not(.hover) {
+					&:not(:hover):not(.hover):not(:active):not(.active) {
 						color: color-yiq($value);
 						@include gradient-bg($value);
 					}

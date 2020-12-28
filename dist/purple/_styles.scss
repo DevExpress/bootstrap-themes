@@ -521,7 +521,7 @@ select.form-control > option:checked,
 		.btn-#{$color} {
 			&:focus,
 			&.focus {
-				&:not(:hover):not(.hover) {
+				&:not(:hover):not(.hover):not(:active):not(.active) {
 					color: color-yiq($value);
 					@include gradient-bg($value);
 				}
