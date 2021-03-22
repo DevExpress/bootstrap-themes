@@ -57,7 +57,15 @@
   }
 }
 .btn.dropdown-toggle {
-    padding: 0.4rem 0.75rem;
+	& {
+		padding: 0.4rem 0.75rem;
+	}
+	&.btn-sm {
+		padding: $btn-padding-y-sm $btn-padding-x-sm;
+	}
+	&.btn-lg {
+		padding: $btn-padding-y-lg $btn-padding-x-lg;
+	}
 }
 
 .btn-group,
