@@ -56,14 +56,23 @@
     box-shadow: 0 0 0 $btn-focus-width rgba(#444444, .2)!important;
   }
 }
-.btn-group-vertical > .btn {
-    @include border-radius($theme-border-radius-sm);
-}
 .btn.dropdown-toggle {
-    padding: 0.4rem 0.8rem;
+	& {
+		padding: 0.4rem 0.8rem;
+	}
+	&.btn-sm {
+		padding: $btn-padding-y-sm $btn-padding-x-sm;
+	}
+	&.btn-lg {
+		padding: $btn-padding-y-lg $btn-padding-x-lg;
+	}
 }
+
 .btn-group {
 	border-radius: $theme-border-radius;
+}
+.btn-group-vertical > .btn {
+    @include border-radius($theme-border-radius-sm);
 }
 .btn-group-vertical {
 	border-radius: $theme-border-radius-sm;
