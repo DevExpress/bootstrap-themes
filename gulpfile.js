@@ -1,5 +1,8 @@
 var themes = ["purple", "office-white", "blazing-berry"];
 
+var distSCSS = "dist";
+var distCSS = () => { return process.env.BOOTSTRAP_VERSION === "5" ? "dist.v5" : "dist"; }
+
 var gulp  = require('gulp'),
   sass = require('gulp-sass'),
   sourcemaps = require('gulp-sourcemaps'),
@@ -34,14 +37,14 @@ var minifyCss = lazypipe()
 
 themes.forEach(theme => {
   gulp.task('compile-' + theme, () =>
-    gulp.src('dist/' + theme + '/*.scss')
+    gulp.src(distSCSS + '/' + theme + '/*.scss')
       .pipe(compileTheme())
-      .pipe(gulp.dest('dist/' + theme + '/'))
+      .pipe(gulp.dest(distCSS() + '/' + theme + '/'))
       .pipe(minifyCss())
-      .pipe(gulp.dest('dist/' + theme + '/'))
+      .pipe(gulp.dest(distCSS() + '/' + theme + '/'))
       .pipe(connect.reload()));
   gulp.task('watch-' + theme, (cb) => {
-    gulp.watch('dist/' + theme + '/*.scss', gulp.series('compile-' + theme));
+    gulp.watch(distSCSS + '/' + theme + '/*.scss', gulp.series('compile-' + theme));
     cb();
   });
 });
@@ -65,6 +68,11 @@ gulp.task('attachHtml', (cb) => {
   gulp.watch('./*.html', gulp.series('html'));
   cb();
 });
-gulp.task('default', gulp.series(themes.map(theme => "compile-" + theme))); 
+gulp.task('prepare', (cb) => {
+  var pkgJson = JSON.parse(require('fs').readFileSync('./package.json'));
+  process.env.BOOTSTRAP_VERSION = pkgJson["dependencies"]["bootstrap"].substring(1, 2);
+  cb();
+}); 
+gulp.task('default', gulp.series('prepare', themes.map(theme => "compile-" + theme))); 
 gulp.task('watch', gulp.series('default', 'connect', 'attachHtml', 'attachScss'));
 

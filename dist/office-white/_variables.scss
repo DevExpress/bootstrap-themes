@@ -23,8 +23,11 @@ $font-size-base: 0.88rem;
 
 $enable-shadows: true;
 
+$min-contrast-ratio: 1.8 !default;
 
 // Custom Variables
+
+$theme-custom-color: #444444 !default;
 
 $theme-font-weight-semibold: 600 !default;
 
