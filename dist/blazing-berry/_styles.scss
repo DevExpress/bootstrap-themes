@@ -3,7 +3,7 @@
 @each $color, $value in $theme-colors {
     .btn-#{$color},
 	.btn-#{$color}.disabled,
-	.btn-#{$color}:disabled, {
+	.btn-#{$color}:disabled {
 		box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
     }
 }
@@ -213,10 +213,14 @@
 // Forms
 
 .input-group > .input-group-prepend > .btn,
+.input-group > .dxbs-input-group-append > .btn, /* bz */
+.input-group > .btn, /* bs5 */
 .input-group > .input-group-append > .btn {
   box-shadow: none !important;
 }
 .input-group > .input-group-prepend > .btn-secondary,
+.input-group > .dxbs-input-group-append > .btn-secondary, /* bz */
+.input-group > .btn-secondary, /* bs5 */
 .input-group > .input-group-append > .btn-secondary {
   border-color: $input-border-color !important;
 }
@@ -411,6 +415,8 @@ th {
 		.btn-group,
 		.btn-group-vertical,
 		.input-group > .input-group-prepend,
+		.input-group > .dxbs-input-group-append, /* bz */
+		.input-group, /* bs5 */
 		.input-group > .input-group-append {
 			.btn-#{$color} {
 				&:focus,
@@ -425,6 +431,8 @@ th {
 			}
 		}
 		.input-group > .input-group-prepend,
+		.input-group > .dxbs-input-group-append, /* bz */
+		.input-group, /* bs5 */
 		.input-group > .input-group-append {
 			& > .btn-#{$color} {
 				&:focus,

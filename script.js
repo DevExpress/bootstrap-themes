@@ -1,18 +1,21 @@
 var dx = dx || {};
 
-(function(){
+(function() {
+    var currentScript = document.currentScript || (function() {
+        var scripts = document.getElementsByTagName('script');
+        return scripts[scripts.length - 1];
+    })();
+
+    var distDir = "dist";
+    if(currentScript.getAttribute("data-bs-version") === "5")
+        distDir += ".v5"
+
     var themes = {};
     themes["purple"] = { folder: "purple", title: "Purple" };
     themes["office-white"] = { folder: "office-white", title: "Office White" };
     themes["blazing-berry"] = { folder: "blazing-berry", title: "Blazing Berry" };
 	
-    $('body').scrollspy({ target: '#scrollspy', offset: 90 });
-
-    $('[data-toggle="popover"]').popover();
-    $('[data-toggle="tooltip"]').tooltip();
-    $('[data-toggle="indeterminate-checkbox"]').prop("indeterminate", true);
-
-    $("a[href='#']").click(function(e) {
+    $("a[href='#']").on("click", function(e) {
         e.preventDefault();
     });
     function getCurrentThemeName() {
@@ -33,8 +36,8 @@ var dx = dx || {};
         var themeName = getCurrentThemeName();
         var theme = themes[themeName];
         if(theme) {
-            var minCssUrl = "dist/" + theme.folder + "/bootstrap.min.css";
-            var cssUrl = "dist/" + theme.folder + "/bootstrap.css";
+            var minCssUrl = distDir + "/" + theme.folder + "/bootstrap.min.css";
+            var cssUrl = distDir + "/" + theme.folder + "/bootstrap.css";
             $("#styleLink").attr("href", minCssUrl);
             $("#downloadCss").attr("href", cssUrl);
             $("#downloadMinCss").attr("href", minCssUrl);
@@ -48,9 +51,13 @@ var dx = dx || {};
         window.history.pushState({ themeName: themeName }, window.title, "?theme=" + themeName + (anchor ? "#" + anchor : ""));
         updateCurrentTheme();
     }
-    $(document).ready(function(){
+    $(function() {
         updateThemesList();
         updateCurrentTheme();
+        $('body').scrollspy({ target: '#scrollspy', offset: 90 });
+        $('[data-toggle="popover"], [data-bs-toggle="popover').popover();
+        $('[data-toggle="tooltip"], [data-bs-toggle="tooltip"]').tooltip();
+        $('[data-toggle="indeterminate-checkbox"], [data-bs-toggle="indeterminate-checkbox"]').prop("indeterminate", true);
     });
     $(window).on('popstate', function() {
         updateThemesList();

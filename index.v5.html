@@ -7,27 +7,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" id="styleLink" href="dist/purple/bootstrap.min.css"/>
+  <link rel="stylesheet" id="styleLink" href="dist.v5/purple/bootstrap.min.css" />
 </head>
 <body>
   <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
     <div class="container">
       <a href="#" class="navbar-brand">DevExpress Bootstrap Themes</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes<span class="caret"></span></a>
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="themes">Themes<span class="caret"></span></a>
             <div class="dropdown-menu" aria-labelledby="themes" id="themesList">
             </div>
           </li>
           <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="downloadTheme">Purple<span class="caret"></span></a>
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="downloadTheme">Purple<span class="caret"></span></a>
               <div class="dropdown-menu" aria-labelledby="downloadTheme">
-                <a class="dropdown-item" id="downloadCss" href="dist/purple/bootstrap.css" target="_blank">bootstrap.css</a>
-                <a class="dropdown-item" id="downloadMinCss" href="dist/purple/bootstrap.min.css" target="_blank">bootstrap.min.css</a>
+                <a class="dropdown-item" id="downloadCss" href="dist.v5/purple/bootstrap.css" target="_blank">bootstrap.css</a>
+                <a class="dropdown-item" id="downloadMinCss" href="dist.v5/purple/bootstrap.min.css" target="_blank">bootstrap.min.css</a>
               </div>
             </li>
           </ul>
@@ -38,6 +38,11 @@
   <div class="container">
     <div class="navigation-menu">
       <ul class="nav nav-pills flex-column" id="scrollspy">
+        <!--
+        <li class="nav-item" role="presentation">
+          <a href="#Accordion" class="nav-link">Accordion</a>
+        </li>
+        -->
         <li class="nav-item" role="presentation">
           <a href="#Alert" class="nav-link">Alert</a>
         </li>
@@ -56,9 +61,11 @@
         <li class="nav-item" role="presentation">
           <a href="#Forms" class="nav-link">Forms</a>
         </li>
+        <!--
         <li class="nav-item" role="presentation">
           <a href="#Jumbotron" class="nav-link">Jumbotron</a>
         </li>
+        -->
         <li class="nav-item" role="presentation">
           <a href="#ListGroup" class="nav-link">List Group</a>
         </li>
@@ -92,28 +99,77 @@
     <div class="components-container">
       <h1 id="themeCaption">Purple</h1>
 
+      <!-- ============================== Accordion ============================= -->
+      <!--
+      <h2 class="component-header" id="Accordion">Accordion</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="component-example">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Accordion Item #1
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Accordion Item #2
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Accordion Item #3
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      -->
+
       <!-- ============================== Alert ============================= -->
       <h2 class="component-header" id="Alert">Alert</h2>
       <div class="row">
         <div class="col-lg-6">
           <div class="component-example">
             <div class="alert alert-dismissible alert-warning">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
               <h5 class="alert-heading">Warning Alert</h5>
               <p class="mb-0">Donec eget augue facilisis, fermentum metus vel, iaculis purus. Aliquam iaculis aliquet sem. Maecenas sagittis nec purus eu cursus. </p>
             </div>
             <div class="alert alert-dismissible alert-danger">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
               <h5 class="alert-heading">Danger Alert</h5>
               <p class="mb-0">Donec eget augue facilisis, fermentum metus vel, iaculis purus. Aliquam iaculis aliquet sem. Maecenas sagittis nec purus eu cursus. </p>
             </div>
             <div class="alert alert-dismissible alert-success">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
               <h5 class="alert-heading">Success Alert</h5>
               <p class="mb-0">Donec eget augue facilisis, fermentum metus vel, iaculis purus. Aliquam iaculis aliquet sem. Maecenas sagittis nec purus eu cursus. </p>
             </div>
             <div class="alert alert-dismissible alert-info">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
               <h5 class="alert-heading">Info Alert</h5>
               <p class="mb-0">Donec eget augue facilisis, fermentum metus vel, iaculis purus. Aliquam iaculis aliquet sem. Maecenas sagittis nec purus eu cursus. </p>
             </div>
@@ -122,22 +178,22 @@
         <div class="col-lg-6">
           <div class="component-example">
             <div class="alert alert-dismissible alert-primary">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
               <h5 class="alert-heading">Primary Alert</h5>
               <p class="mb-0">Donec eget augue facilisis, fermentum metus vel, iaculis purus. Aliquam iaculis aliquet sem. Maecenas sagittis nec purus eu cursus. </p>
             </div>
             <div class="alert alert-dismissible alert-secondary">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
               <h5 class="alert-heading">Secondary Alert</h5>
               <p class="mb-0">Donec eget augue facilisis, fermentum metus vel, iaculis purus. Aliquam iaculis aliquet sem. Maecenas sagittis nec purus eu cursus. </p>
             </div>
             <div class="alert alert-dismissible alert-light">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
               <h5 class="alert-heading">Light Alert</h5>
               <p class="mb-0">Donec eget augue facilisis, fermentum metus vel, iaculis purus. Aliquam iaculis aliquet sem. Maecenas sagittis nec purus eu cursus. </p>
             </div>
             <div class="alert alert-dismissible alert-dark">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
               <h5 class="alert-heading">Dark Alert</h5>
               <p class="mb-0">Donec eget augue facilisis, fermentum metus vel, iaculis purus. Aliquam iaculis aliquet sem. Maecenas sagittis nec purus eu cursus. </p>
             </div>
@@ -148,24 +204,24 @@
       <!-- ============================== Badge ============================= -->
       <h2 class="component-header" id="Badge">Badge</h2>
       <div class="component-example">
-        <span class="badge badge-primary">Primary</span>
-        <span class="badge badge-secondary">Secondary</span>
-        <span class="badge badge-success">Success</span>
-        <span class="badge badge-danger">Danger</span>
-        <span class="badge badge-warning">Warning</span>
-        <span class="badge badge-info">Info</span>
-        <span class="badge badge-light">Light</span>
-        <span class="badge badge-dark">Dark</span>
+        <span class="badge bg-primary">Primary</span>
+        <span class="badge bg-secondary text-dark">Secondary</span>
+        <span class="badge bg-success">Success</span>
+        <span class="badge bg-danger">Danger</span>
+        <span class="badge bg-warning">Warning</span>
+        <span class="badge bg-info">Info</span>
+        <span class="badge bg-light text-dark">Light</span>
+        <span class="badge bg-dark">Dark</span>
       </div>
       <div class="component-example">
-        <span class="badge badge-pill badge-primary">Primary</span>
-        <span class="badge badge-pill badge-secondary">Secondary</span>
-        <span class="badge badge-pill badge-success">Success</span>
-        <span class="badge badge-pill badge-danger">Danger</span>
-        <span class="badge badge-pill badge-warning">Warning</span>
-        <span class="badge badge-pill badge-info">Info</span>
-        <span class="badge badge-pill badge-light">Light</span>
-        <span class="badge badge-pill badge-dark">Dark</span>
+        <span class="badge badge-pill bg-primary">Primary</span>
+        <span class="badge badge-pill bg-secondary text-dark">Secondary</span>
+        <span class="badge badge-pill bg-success">Success</span>
+        <span class="badge badge-pill bg-danger">Danger</span>
+        <span class="badge badge-pill bg-warning">Warning</span>
+        <span class="badge badge-pill bg-info">Info</span>
+        <span class="badge badge-pill bg-light text-dark">Light</span>
+        <span class="badge badge-pill bg-dark">Dark</span>
       </div>
       
       <!-- ============================== Breadcrumb ============================= -->
@@ -197,7 +253,7 @@
             <button type="button" class="btn btn-info">Info</button>
             <button type="button" class="btn btn-warning">Warning</button>
             <button type="button" class="btn btn-danger">Danger</button>
-            <button type="button" class="btn btn-dark">Dark</button>            
+            <button type="button" class="btn btn-dark">Dark</button>
             <button type="button" class="btn btn-link">Link</button>
           </div>
 
@@ -226,7 +282,7 @@
             <div class="btn-group" role="group" aria-label="Button group with dropdown menu">
               <button type="button" class="btn btn-primary">Primary</button>
               <div class="btn-group" role="group">
-                <button id="btnDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                <button id="btnDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                 <div class="dropdown-menu" aria-labelledby="btnDrop1">
                     <a class="dropdown-item" href="#">Dropdown Item</a>
                     <a class="dropdown-item" href="#">Dropdown Item</a>
@@ -238,7 +294,7 @@
             <div class="btn-group" role="group" aria-label="Button group with dropdown menu">
                 <button type="button" class="btn btn-secondary">Secondary</button>
                 <div class="btn-group" role="group">
-                  <button id="btnDrop2" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                  <button id="btnDrop2" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                   <div class="dropdown-menu" aria-labelledby="btnDrop2">
                       <a class="dropdown-item" href="#">Dropdown Item</a>
                       <a class="dropdown-item" href="#">Dropdown Item</a>
@@ -250,7 +306,7 @@
             <div class="btn-group" role="group" aria-label="Button group with dropdown menu">
               <button type="button" class="btn btn-success">Success</button>
               <div class="btn-group" role="group">
-                <button id="btnDrop3" type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                <button id="btnDrop3" type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                 <div class="dropdown-menu" aria-labelledby="btnDrop3">
                     <a class="dropdown-item" href="#">Dropdown Item</a>
                     <a class="dropdown-item" href="#">Dropdown Item</a>
@@ -262,7 +318,7 @@
             <div class="btn-group" role="group" aria-label="Button group with dropdown menu">
               <button type="button" class="btn btn-info">Info</button>
               <div class="btn-group" role="group">
-                <button id="btnDrop4" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                <button id="btnDrop4" type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                 <div class="dropdown-menu" aria-labelledby="btnDrop4">
                     <a class="dropdown-item" href="#">Dropdown Item</a>
                     <a class="dropdown-item" href="#">Dropdown Item</a>
@@ -274,7 +330,7 @@
             <div class="btn-group" role="group" aria-label="Button group with dropdown menu">
               <button type="button" class="btn btn-danger">Danger</button>
               <div class="btn-group" role="group">
-                <button id="btnDrop5" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                <button id="btnDrop5" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                 <div class="dropdown-menu" aria-labelledby="btnDrop5">
                     <a class="dropdown-item" href="#">Dropdown Item</a>
                     <a class="dropdown-item" href="#">Dropdown Item</a>
@@ -303,29 +359,25 @@
           </div>
 
           <div class="component-example">
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-primary active">
-                <input type="checkbox" checked autocomplete="off">Check One
-              </label>
-              <label class="btn btn-primary">
-                <input type="checkbox" autocomplete="off">Check Two
-              </label>
+            <div class="btn-group" role="group">
+              <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+              <label class="btn btn-outline-primary" for="btncheck1">Check One</label>
+              <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+              <label class="btn btn-outline-primary" for="btncheck2">Check Two</label>
             </div>
           </div>
 
           <div class="component-example">
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-primary active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked>Radio One
-              </label>
-              <label class="btn btn-primary">
-                <input type="radio" name="options" id="option2" autocomplete="off">Radio Two
-              </label>
+            <div class="btn-group" role="group">
+              <input type="radio" class="btn-check" name="options" name="option1" id="option1" autocomplete="off" checked>
+              <label class="btn btn-outline-primary" for="option1">Radio One</label>
+              <input type="radio" class="btn-check" name="options" name="option2" id="option2" autocomplete="off">
+              <label class="btn btn-outline-primary" for="option2">Radio Two</label>
             </div>
           </div>
 
           <div class="component-example">
-            <div class="btn-group-vertical" data-toggle="buttons" aria-label="Vertical Button Group">
+            <div class="btn-group-vertical" data-bs-toggle="buttons" aria-label="Vertical Button Group">
               <button type="button" class="btn btn-primary">Button</button>
               <button type="button" class="btn btn-primary">Button</button>
               <button type="button" class="btn btn-primary active">Active</button>
@@ -343,12 +395,12 @@
 
           <div class="component-example">
             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with Button Groups">
-              <div class="btn-group mr-2" role="group" aria-label="First group">
+              <div class="btn-group me-2" role="group" aria-label="First group">
                 <button type="button" class="btn btn-secondary">1</button>
                 <button type="button" class="btn btn-secondary">2</button>
                 <button type="button" class="btn btn-secondary">3</button>
               </div>
-              <div class="btn-group mr-2" role="group" aria-label="Second group">
+              <div class="btn-group me-2" role="group" aria-label="Second group">
                 <button type="button" class="btn btn-secondary">4</button>
                 <button type="button" class="btn btn-secondary">5</button>
               </div>
@@ -491,22 +543,22 @@
             <form>
               <fieldset>
                 <legend>Legend</legend>
-                <div class="form-group row">
+                <div class="mb-3 row">
                   <label for="staticText" class="col-sm-4 col-form-label">Plain Text:</label>
                   <div class="col-sm-8">
                     <input type="text" readonly class="form-control-plaintext" id="staticText" value="email@devexpress.com">
                   </div>
                 </div>
-                <div class="form-group">
+                <div class="mb-3">
                   <label for="text">Text Input:</label>
                   <input type="email" class="form-control" id="text" aria-describedby="textHelp" placeholder="Enter text">
                   <small id="textHelp" class="form-text text-muted">Text input help text.</small>
                 </div>
-                <div class="form-group">
+                <div class="mb-3">
                   <label for="password">Password Input:</label>
                   <input type="password" class="form-control" id="password" placeholder="Password" value="qwerty">
                 </div>
-                <div class="form-group">
+                <div class="mb-3">
                   <label for="select">Select:</label>
                   <select class="form-control" id="select">
                     <option>Select Option</option>
@@ -514,7 +566,7 @@
                     <option>Select Option</option>
                   </select>
                 </div>
-                <div class="form-group">
+                <div class="mb-3">
                   <label for="multipleSelect">Multiple Select:</label>
                   <select multiple class="form-control" id="multipleSelect">
                       <option>Select Option</option>
@@ -525,61 +577,47 @@
                       <option>Select Option</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="mb-3">
                   <label for="textArea">Textarea:</label>
                   <textarea class="form-control" id="textArea" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor at felis in egestas. Nam pharetra ultricies volutpat. Ut quis euismod dolor. Donec sit amet dolor varius, viverra enim quis, vestibulum arcu. Cras porttitor dolor justo, quis posuere ex maximus in. Aliquam erat volutpat. Sed hendrerit ipsum urna, et ultrices felis condimentum et. Maecenas sodales, sem non luctus tempor, risus augue convallis ligula, sed semper erat dui ac elit. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec quis vulputate neque. Donec sagittis ac nisi eu blandit. Sed tellus diam, laoreet a vulputate vitae, feugiat non est. Ut malesuada laoreet ligula.</textarea>
                 </div>
-                <div class="form-group">
+                <div class="mb-3">
                   <label for="file">File Input:</label>
                   <input type="file" class="form-control-file" id="file" aria-describedby="fileHelp">
                   <small id="fileHelp" class="form-text text-muted">File input help text.</small>
                 </div>
-                <fieldset class="form-group">
+                <fieldset class="mb-3">
                   <legend>Radio Buttons</legend>
                   <div class="form-check">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="optionsRadios" id="option1" value="option1" checked>
-                      Option One
-                    </label>
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="option1" value="option1" checked>
+                    <label class="form-check-label">Option One</label>
                   </div>
                   <div class="form-check">
-                  <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="optionsRadios" id="option2" value="option2">
-                      Option Two
-                    </label>
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="option2" value="option2">
+                    <label class="form-check-label">Option Two</label>
                   </div>
                   <div class="form-check disabled">
-                  <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="optionsRadios" id="option3" value="option3" disabled>
-                      Option Three (disabled)
-                    </label>
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="option3" value="option3" disabled>
+                    <label class="form-check-label">Option Three (disabled)</label>
                   </div>
                 </fieldset>
-                <fieldset class="form-group">
+                <fieldset class="mb-3">
                   <legend>CheckBoxes</legend>
                   <div class="form-check">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" value="" checked>
-                      Option One
-                    </label>
+                    <input class="form-check-input" type="checkbox" value="" checked>
+                    <label class="form-check-label">Option One</label>
                   </div>
                   <div class="form-check">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" value="">
-                      Option Two
-                    </label>
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label">Option Two</label>
                   </div>
                   <div class="form-check">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" value="" data-toggle="indeterminate-checkbox">
-                      Option Three (Indeterminate)
-                    </label>
+                    <input class="form-check-input" type="checkbox" value="" data-bs-toggle="indeterminate-checkbox">
+                    <label class="form-check-label">Option Three (Indeterminate)</label>
                   </div>
                   <div class="form-check disabled">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" value="" disabled>
-                      Option Four (disabled)
-                    </label>
+                    <input class="form-check-input" type="checkbox" value="" disabled>
+                    <label class="form-check-label">Option Four (disabled)</label>
                   </div>
                 </fieldset>
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -590,75 +628,75 @@
         <div class="col-lg-5">
 
           <form class="component-example">
-            <div class="form-group">
+            <div class="mb-3">
               <fieldset disabled>
                 <label class="control-label" for="disabledText">Disabled Text Input:</label>
                 <input class="form-control" id="disabledText" type="text" placeholder="Disabled Text" disabled>
               </fieldset>
             </div>
 
-            <div class="form-group">
+            <div class="mb-3">
               <fieldset>
                 <label class="control-label" for="readOnlyText">Readonly Text Input:</label>
                 <input class="form-control" id="readOnlyText" type="text" placeholder="Readonly Text" readonly>
               </fieldset>
             </div>
 
-            <div class="form-group has-success">
+            <div class="mb-3 has-success">
               <label class="form-control-label" for="successText">Valid Text Input:</label>
               <input type="text" value="valid value" class="form-control is-valid" id="successText">
               <div class="valid-feedback">The entered value is correct!</div>
             </div>
 
-            <div class="form-group has-danger">
+            <div class="mb-3 has-danger">
               <label class="form-control-label" for="dangerText">Invalid Text Input:</label>
               <input type="text" value="invalid value" class="form-control is-invalid" id="dangerText">
               <div class="invalid-feedback">The entered value is incorrect.</div>
             </div>
 
-            <div class="form-group">
+            <div class="mb-3">
               <label class="col-form-label col-form-label-lg" for="largeText">Large Text Input:</label>
               <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" id="largeText">
             </div>
 
-            <div class="form-group">
+            <div class="mb-3">
               <label class="col-form-label" for="defaultText">Default Text Input:</label>
               <input type="text" class="form-control" placeholder="text" id="defaultText">
             </div>
 
-            <div class="form-group">
+            <div class="mb-3">
               <label class="col-form-label col-form-label-sm" for="smallText">Small Text Input:</label>
               <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" id="smallText">
             </div>
 
-            <div class="form-group">
+            <div class="mb-3">
               <label class="control-label">Text Input with Text Addons:</label>
-              <div class="form-group">
+              <div class="mb-3">
                 <div class="input-group mb-3">
-                  <div class="input-group-prepend">
+                  <!-- <div class="input-group-prepend"> -->
                     <span class="input-group-text">Text 1</span>
-                  </div>
+                  <!-- </div> -->
                   <input type="text" class="form-control" aria-label="Amount">
-                  <div class="input-group-append">
+                  <!-- <div class="input-group-append"> -->
                     <span class="input-group-text">Text 2</span>
                     <span class="input-group-text">Text 3</span>
-                  </div>
+                  <!-- </div> -->
                 </div>
               </div>
             </div>
 
-            <div class="form-group">
+            <div class="mb-3">
               <label class="control-label">Text Input with Button Addons:</label>
-              <div class="form-group">
+              <div class="mb-3">
                 <div class="input-group mb-3">
-                  <div class="input-group-prepend">
+                  <!-- <div class="input-group-prepend"> -->
                       <button type="button" class="btn btn-secondary">Btn 1</button>
-                  </div>
+                  <!-- </div> -->
                   <input type="text" class="form-control" aria-label="Amount">
-                  <div class="input-group-append">
+                  <!-- <div class="input-group-append"> -->
                     <button type="button" class="btn btn-secondary">Btn 2</button>
                     <button type="button" class="btn btn-secondary">Btn 3</button>
-                  </div>
+                  <!-- </div> -->
                 </div>
               </div>
             </div>
@@ -667,72 +705,70 @@
           <div class="component-example">
             <fieldset>
               <legend>Custom Forms</legend>
-              <div class="form-group">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
-                  <label class="custom-control-label" for="customRadio1">Option One</label>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input type="radio" id="customRadio1" name="customRadio" class="form-check-input" checked>
+                  <label class="form-check-label" for="customRadio1">Option One</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="customRadio2" name="customRadio" class="form-check-input">
+                  <label class="form-check-label" for="customRadio2">Option Two</label>
                 </div>
                 <div class="custom-control custom-radio">
-                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                  <label class="custom-control-label" for="customRadio2">Option Two</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" disabled>
-                  <label class="custom-control-label" for="customRadio3">Option three (disabled)</label>
+                  <input type="radio" id="customRadio3" name="customRadio" class="form-check-input" disabled>
+                  <label class="form-check-label" for="customRadio3">Option three (disabled)</label>
                 </div>
               </div>
-              <div class="form-group">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
-                  <label class="custom-control-label" for="customCheck1">Option One</label>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="customCheck1" checked>
+                  <label class="form-check-label" for="customCheck1">Option One</label>
                 </div>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck2">
-                  <label class="custom-control-label" for="customCheck2">Option Two</label>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="customCheck2">
+                  <label class="form-check-label" for="customCheck2">Option Two</label>
                 </div>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck3" data-toggle="indeterminate-checkbox">
-                  <label class="custom-control-label" for="customCheck3">Option Three (Indeterminate)</label>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="customCheck3" data-bs-toggle="indeterminate-checkbox">
+                  <label class="form-check-label" for="customCheck3">Option Three (Indeterminate)</label>
                 </div>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck4" disabled>
-                  <label class="custom-control-label" for="customCheck4">Option Four (Disabled)</label>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="custom-control custom-switch">
-                  <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
-                  <label class="custom-control-label" for="customSwitch1">Option One</label>
-                </div>
-                <div class="custom-control custom-switch">
-                  <input type="checkbox" class="custom-control-input" id="customSwitch2">
-                  <label class="custom-control-label" for="customSwitch2">Option Two</label>
-                </div>
-                <div class="custom-control custom-switch">
-                  <input type="checkbox" class="custom-control-input" id="customSwitch3" disabled>
-                  <label class="custom-control-label" for="customSwitch3">Option Four (Disabled)</label>
-                </div>
-                <div class="custom-control custom-switch">
-                  <input type="checkbox" class="custom-control-input" id="customSwitch4" checked disabled>
-                  <label class="custom-control-label" for="customSwitch4">Option Four (checked Disabled)</label>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="customCheck4" disabled>
+                  <label class="form-check-label" for="customCheck4">Option Four (Disabled)</label>
                 </div>
               </div>
-              <div class="form-group">
-                <select class="custom-select">
+              <div class="mb-3">
+                <div class="form-check form-switch">
+                  <input type="checkbox" class="form-check-input" id="customSwitch1" checked>
+                  <label class="form-check-label" for="customSwitch1">Option One</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input type="checkbox" class="form-check-input" id="customSwitch2">
+                  <label class="form-check-label" for="customSwitch2">Option Two</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input type="checkbox" class="form-check-input" id="customSwitch3" disabled>
+                  <label class="form-check-label" for="customSwitch3">Option Four (Disabled)</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input type="checkbox" class="form-check-input" id="customSwitch4" checked disabled>
+                  <label class="form-check-label" for="customSwitch4">Option Four (checked Disabled)</label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <select class="form-select">
                   <option>Select Option</option>
                   <option>Select Option</option>
                   <option>Select Option</option>
                 </select>
               </div>
-              <div class="form-group">
+              <div class="mb-3">
                 <div class="input-group mb-3">
-                  <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="customFile">
-                    <label class="custom-file-label" for="customFile">Custom File Input</label>
-                  </div>
-                  <div class="input-group-append">
-                    <span class="btn btn-secondary">Upload</span>
-                  </div>
+                  <input type="file" class="form-control" id="customFile">
+                  <label class="input-group-text" for="customFile">Upload</label>
+                  <!-- <div class="input-group-append"> -->
+                  <!-- <span class="btn btn-secondary">Upload</span> -->
+                  <!-- </div> -->
                 </div>
               </div>
             </fieldset>
@@ -741,15 +777,16 @@
       </div>
 
       <!-- ============================== Jumbotron ============================= -->
+      <!--
       <h2 class="component-header" id="Jumbotron">Jumbotron</h2>
       <div class="component-example">
-        <div class="jumbotron">
+        <div class="bg-light">
           <h1 class="display-3">Jumbotron!</h1>
           <hr class="my-2">
           <p>Morbi ultricies porttitor quam ornare varius. Nunc ornare non ipsum in sodales. Duis in sagittis lorem. Vivamus vel sapien nulla. Quisque pharetra viverra mi, ac sodales metus aliquet eu. Etiam porta risus massa, ut dignissim ipsum laoreet sed. Donec non maximus eros, ut facilisis leo. Curabitur id suscipit tellus. Ut tellus tellus, feugiat vel enim eget, mattis sagittis massa. Nulla facilisi.</p>
         </div>
       </div>
-
+      -->
       <!-- ============================== List Group ============================= -->
       <h2 class="component-header" id="ListGroup">List Group</h2>
       <div class="row">
@@ -796,16 +833,15 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title">Modal Title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 </button>
               </div>
               <div class="modal-body">
                 Aenean in ornare diam. Pellentesque condimentum tellus ut nisi fringilla finibus. Quisque tempus ornare lectus. Maecenas luctus consequat turpis, non placerat dolor vulputate sit amet. Praesent commodo vehicula nulla quis ultrices.
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Update</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
@@ -816,88 +852,94 @@
       <h2 class="component-header" id="Navbar">Navbar</h2>
       <div class="component-example">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar01" aria-controls="navbar01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar01" aria-controls="navbar01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <div class="collapse navbar-collapse" id="navbar01">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Demos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control" type="text" placeholder="Search">
-              <button class="btn btn-secondary ml-2" type="submit">Search</button>
-            </form>
+            <div class="collapse navbar-collapse" id="navbar01">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Demos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+              </ul>
+              <form class="d-flex form-inline my-2 my-lg-0">
+                <input class="form-control" type="text" placeholder="Search">
+                <button class="btn btn-secondary ms-2" type="submit">Search</button>
+              </form>
+            </div>
           </div>
         </nav>
       </div>
       <div class="component-example">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar02" aria-controls="navbar02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar02" aria-controls="navbar02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <div class="collapse navbar-collapse" id="navbar02">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Demos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control" type="text" placeholder="Search">
-              <button class="btn btn-secondary ml-2" type="submit">Search</button>
-            </form>
+            <div class="collapse navbar-collapse" id="navbar02">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Demos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+              </ul>
+              <form class="d-flex form-inline my-2 my-lg-0">
+                <input class="form-control" type="text" placeholder="Search">
+                <button class="btn btn-secondary ms-2" type="submit">Search</button>
+              </form>
+            </div>
           </div>
         </nav>
       </div>
       <div class="component-example">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar03" aria-controls="navbar03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar03" aria-controls="navbar03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <div class="collapse navbar-collapse" id="navbar03">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Demos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control" type="text" placeholder="Search">
-              <button class="btn btn-secondary ml-2" type="submit">Search</button>
-            </form>
+            <div class="collapse navbar-collapse" id="navbar03">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Demos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+              </ul>
+              <form class="d-flex form-inline my-2 my-lg-0">
+                <input class="form-control" type="text" placeholder="Search">
+                <button class="btn btn-secondary ms-2" type="submit">Search</button>
+              </form>
+            </div>
           </div>
         </nav>
       </div>
@@ -910,10 +952,10 @@
           <div class="component-example">
             <ul class="nav nav-tabs mb-2">
               <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#home">Active</a>
+                <a class="nav-link active" data-bs-toggle="tab" href="#home">Active</a>
               </li>
               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Dropdown Item</a>
                     <a class="dropdown-item" href="#">Dropdown Item</a>
@@ -922,7 +964,7 @@
                   </div>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#profile">Item</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#profile">Item</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" href="#">Disabled</a>
@@ -953,7 +995,7 @@
                 <a class="nav-link active" href="#">Active</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Dropdown Item</a>
                     <a class="dropdown-item" href="#">Dropdown Item</a>
@@ -976,7 +1018,7 @@
                 <a class="nav-link active" href="#">Active</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="#">Dropdown Item</a>
                   <a class="dropdown-item" href="#">Dropdown Item</a>
@@ -1089,10 +1131,10 @@
       <!-- ============================== Popovers ============================= -->
       <h2 class="component-header" id="Popovers">Popovers</h2>
       <div class="component-example">
-        <button type="button" class="btn btn-secondary" title="Popover Title" data-container="body" data-toggle="popover" data-placement="left" data-content="Sed id nisl vel augue auctor semper. Curabitur ut elit convallis, auctor ex sit amet, condimentum est. Ut egestas ultrices lacus a fringilla.">Left</button>
-        <button type="button" class="btn btn-secondary" title="Popover Title" data-container="body" data-toggle="popover" data-placement="top" data-content="Sed id nisl vel augue auctor semper. Curabitur ut elit convallis, auctor ex sit amet, condimentum est. Ut egestas ultrices lacus a fringilla.">Top</button>
-        <button type="button" class="btn btn-secondary" title="Popover Title" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Sed id nisl vel augue auctor semper. Curabitur ut elit convallis, auctor ex sit amet, condimentum est. Ut egestas ultrices lacus a fringilla.">Bottom</button>
-        <button type="button" class="btn btn-secondary" title="Popover Title" data-container="body" data-toggle="popover" data-placement="right" data-content="Sed id nisl vel augue auctor semper. Curabitur ut elit convallis, auctor ex sit amet, condimentum est. Ut egestas ultrices lacus a fringilla.">Right</button>
+        <button type="button" class="btn btn-secondary" title="Popover Title" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Sed id nisl vel augue auctor semper. Curabitur ut elit convallis, auctor ex sit amet, condimentum est. Ut egestas ultrices lacus a fringilla.">Left</button>
+        <button type="button" class="btn btn-secondary" title="Popover Title" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Sed id nisl vel augue auctor semper. Curabitur ut elit convallis, auctor ex sit amet, condimentum est. Ut egestas ultrices lacus a fringilla.">Top</button>
+        <button type="button" class="btn btn-secondary" title="Popover Title" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Sed id nisl vel augue auctor semper. Curabitur ut elit convallis, auctor ex sit amet, condimentum est. Ut egestas ultrices lacus a fringilla.">Bottom</button>
+        <button type="button" class="btn btn-secondary" title="Popover Title" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Sed id nisl vel augue auctor semper. Curabitur ut elit convallis, auctor ex sit amet, condimentum est. Ut egestas ultrices lacus a fringilla.">Right</button>
       </div>
       
       <!-- ============================== Progress ============================= -->
@@ -1278,18 +1320,18 @@
       <!-- ============================== Tooltips ============================= -->
       <h2 class="component-header" id="Tooltips">Tooltips</h2>
       <div class="component-example mb-4">
-        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Nullam gravida sit amet felis sodales dictum.">Left</button>
-        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Nullam gravida sit amet felis sodales dictum.">Top</button>
-        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Nullam gravida sit amet felis sodales dictum.">Bottom</button>
-        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Nullam gravida sit amet felis sodales dictum.">Right</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Nullam gravida sit amet felis sodales dictum.">Left</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Nullam gravida sit amet felis sodales dictum.">Top</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nullam gravida sit amet felis sodales dictum.">Bottom</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Nullam gravida sit amet felis sodales dictum.">Right</button>
       </div>
 
     </div>
   </div>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
-  <script src="script.js" data-bs-version="4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+  <script src="script.js" data-bs-version="5"></script>
 </body>
 </html>
