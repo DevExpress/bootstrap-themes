@@ -75,3 +75,7 @@ This project code is released under the [MIT License](LICENSE).
 ## More Information
 
 Read this [blog post](https://community.devexpress.com/blogs/aspnet/archive/2018/08/15/free-devexpress-bootstrap-4-themes.aspx) for more information about this repository.
+
+## Support and Feedback
+
+Welcome to our [Support Center](https://supportcenter.devexpress.com/ticket/create) if you want to ask questions, share ideas, or report an issue.
