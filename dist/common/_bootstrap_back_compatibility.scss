@@ -45,6 +45,9 @@ $custom-checkbox-indicator-icon-indeterminate:         url("data:image/svg+xml,<
 $custom-checkbox-indicator-indeterminate-box-shadow:   null !default;
 $custom-checkbox-indicator-indeterminate-border-color: $custom-checkbox-indicator-indeterminate-bg !default;
 
+$custom-radio-indicator-border-radius:          50% !default;
+$custom-radio-indicator-icon-checked:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'><circle r='3' fill='#{$custom-control-indicator-checked-color}'/></svg>") !default;
+
 $custom-switch-width:                           $custom-control-indicator-size * 1.75 !default;
 $custom-switch-indicator-border-radius:         $custom-control-indicator-size / 2 !default;
 $custom-switch-indicator-size:                  subtract($custom-control-indicator-size, $custom-control-indicator-border-width * 4) !default;
@@ -198,6 +201,29 @@ $custom-switch-indicator-size:                  subtract($custom-control-indicat
     }
   }
   
+  // Radios
+  //
+  // Tweak just a few things for radios.
+
+  .custom-radio {
+    .custom-control-label::before {
+      // stylelint-disable-next-line property-disallowed-list
+      border-radius: $custom-radio-indicator-border-radius;
+    }
+
+    .custom-control-input:checked ~ .custom-control-label {
+      &::after {
+        background-image: escape-svg($custom-radio-indicator-icon-checked);
+      }
+    }
+
+    .custom-control-input:disabled {
+      &:checked ~ .custom-control-label::before {
+        @include gradient-bg($custom-control-indicator-checked-disabled-bg);
+      }
+    }
+  }
+
   // switches
   //
   // Tweak a few things for switches
@@ -285,5 +311,4 @@ $custom-switch-indicator-size:                  subtract($custom-control-indicat
           }
         }
       }
-    }
-  */
+    }*/
