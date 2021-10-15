@@ -1,4 +1,4 @@
-var themes = ["purple", "office-white", "blazing-berry"];
+var themes = ["purple", "office-white", "blazing-berry", "blazing-dark"];
 
 var distSCSS = "dist";
 var distCSS = () => { return process.env.BOOTSTRAP_VERSION === "5" ? "dist.v5" : "dist"; }

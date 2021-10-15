@@ -175,23 +175,6 @@
 .breadcrumb-item a {
 	color: #716d78;
 }
-.breadcrumb-item a:not(.active):hover {
-	position: relative;
-	transform: scale(1);
-	text-decoration: none;
-}
-.breadcrumb-item a:not(.active):hover:before {
-	content: " ";
-    position: absolute;
-    z-index: -1;
-    width: calc(1rem + 100%);
-    height: calc(.5rem + 100%);
-    background-color: #000;
-    left: -0.5rem;
-    top: -0.25rem;
-    opacity: 0.05;
-	border-radius: .2rem;
-}
 
 // Card
 

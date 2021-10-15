@@ -10,6 +10,7 @@ This repository contains free and open source themes that were created for websi
 ## Table of Contents
 - [What's Included](#whats-included)
     - [DevExpress Blazing Berry](#devexpress-blazing-berry)
+    - [DevExpress Blazing Dark](#devexpress-blazing-dark)
     - [DevExpress Office White](#devexpress-office-white)
     - [DevExpress Purple](#devexpress-purple)
 - [Getting Started](#getting-started)
@@ -25,6 +26,12 @@ This repository contains free and open source themes that were created for websi
 ![Blazing Berry](/media/Blazing_Berry.png)
 
 [Open CSS File](dist/blazing-berry/bootstrap.css) | [Open Minimized CSS File](dist/blazing-berry/bootstrap.min.css)  |  [View Demo](https://devexpress.github.io/bootstrap-themes/index.html?theme=blazing-berry)
+
+### DevExpress Blazing Dark
+
+![Blazing Berry](/media/Blazing_Dark.png)
+
+[Open CSS File](dist/blazing-dark/bootstrap.css) | [Open Minimized CSS File](dist/blazing-dark/bootstrap.min.css)  |  [View Demo](https://devexpress.github.io/bootstrap-themes/index.html?theme=blazing-dark)
 
 ### DevExpress Office White
 
@@ -42,7 +49,7 @@ This repository contains free and open source themes that were created for websi
 
 ## Getting Started
 
-The [/dist/](dist) and [/dist.v5/](dist.v5) folders include nested folders whose names correspond to theme names: [blazing-berry](dist/blazing-berry), [office-white](dist/office-white), and [purple](dist/purple). Each nested folder contains the following theme-related files:
+The [/dist/](dist) and [/dist.v5/](dist.v5) folders include nested folders whose names correspond to theme names: [blazing-berry](dist/blazing-berry), [blazing-dark](dist/blazing-dark), [office-white](dist/office-white), and [purple](dist/purple). Each nested folder contains the following theme-related files:
 
 1) Theme stylesheets that you can apply to your application. 
 * **bootstrap.css** - a ready-to-use CSS file.

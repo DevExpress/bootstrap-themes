@@ -14,6 +14,7 @@ var dx = dx || {};
     themes["purple"] = { folder: "purple", title: "Purple" };
     themes["office-white"] = { folder: "office-white", title: "Office White" };
     themes["blazing-berry"] = { folder: "blazing-berry", title: "Blazing Berry" };
+    themes["blazing-dark"] = { folder: "blazing-dark", title: "Blazing Dark" };
 	
     $("a[href='#']").on("click", function(e) {
         e.preventDefault();

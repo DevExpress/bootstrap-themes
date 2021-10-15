@@ -12,6 +12,7 @@ $font-size-sm: 0.8125rem;
 
 $border-radius: .2rem;
 $border-radius-sm: .15rem;
+$border-radius-lg: .3rem;
 
 $min-contrast-ratio: 2.2 !default;
 
@@ -30,8 +31,9 @@ $badge-font-size: 80%;
 
 // Breadcrumb
 
-$breadcrumb-divider-color: #716d78;
-$breadcrumb-active-color: #716d78;
+$breadcrumb-bg: $gray-100;
+$breadcrumb-divider-color: #AAA;
+$breadcrumb-active-color: #AAA;
 $breadcrumb-item-padding: .75rem;
 
 // Buttons
