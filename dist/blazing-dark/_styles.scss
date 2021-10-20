@@ -269,6 +269,12 @@ hr {
 	border-color: $blue;
 }
 
+// Popover 
+
+.popover .popover-header {
+	border-color: $gray-400;
+}
+
 // Switches
 
 .custom-switch .custom-control-label::after {
