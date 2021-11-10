@@ -79,7 +79,8 @@ $card-spacer-x: 1.25rem;
 
 // Dropdowns
 
-$dropdown-bg: $gray-900;
+$dropdown-bg: $gray-700;
+$dropdown-border-color: $gray-400;
 $dropdown-color: $white;
 $dropdown-link-color: $white;
 $dropdown-link-hover-color: $white;
@@ -138,6 +139,7 @@ $modal-content-box-shadow-xs: $theme-box-shadow-lg;
 $modal-content-box-shadow-sm-up: $theme-box-shadow-lg;
 $modal-content-color: $white;
 $modal-content-bg: $gray-700;
+$modal-content-border-color: $gray-400;
 $modal-header-border-color: $gray-400;
 $modal-footer-border-color: $gray-400;
 $close-color: $white; // bs4
