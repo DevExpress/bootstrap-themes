@@ -2,195 +2,214 @@
 
 @each $color, $value in $theme-colors {
     .btn-#{$color},
-	.btn-#{$color}.disabled,
-	.btn-#{$color}:disabled {
-		box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
+    .btn-#{$color}.disabled,
+    .btn-#{$color}:disabled {
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     }
 }
+
 .btn-secondary.disabled,
 .btn-secondary:disabled,
 .btn-secondary {
-	color: #212529;
+    color: #212529;
     background-color: #fff;
     border-color: #fff;
 }
+
 .btn-secondary:focus,
 .btn-secondary.focus,
 .btn-secondary:not(:disabled):not(.disabled):hover {
-	color: #212529;
+    color: #212529;
     background-color: #ececec;
     border-color: #e6e6e6;
 }
+
 .btn-secondary:focus:not(:disabled):not(.disabled),
 .btn-secondary.focus:not(:disabled):not(.disabled) {
-  @if $enable-shadows {
-    box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(#444444, .2)!important;
-  } @else {
-    box-shadow: 0 0 0 $btn-focus-width rgba(#444444, .2)!important;
-  }
+    @if $enable-shadows {
+        box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(#444444, .2) !important;
+    } @else {
+        box-shadow: 0 0 0 $btn-focus-width rgba(#444444, .2) !important;
+    }
 }
+
 .btn-secondary:not(:disabled):not(.disabled).active,
 .btn-secondary:not(:disabled):not(.disabled):active,
-.show>.btn-secondary.dropdown-toggle {
-	color: #212529;
+.show > .btn-secondary.dropdown-toggle {
+    color: #212529;
     background-color: #e6e6e6;
     border-color: #dfdfdf;
 }
+
 .btn-outline-secondary {
-	color: #686868;
-	border-color: #d7d8d9;
+    color: #686868;
+    border-color: #d7d8d9;
 }
+
 .btn-group,
 .btn-group-vertical {
-	box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.2);
-	border-radius: $border-radius;
-	&.btn-group-sm {
-		border-radius: $border-radius-sm;
+    box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.2);
+    border-radius: $border-radius;
+
+    &.btn-group-sm {
+        border-radius: $border-radius-sm;
     }
-	&.btn-group-lg {
-		border-radius: $border-radius-lg;
-	}
-	
-	.btn-group,
-	.btn-group-vertical	{
-		box-shadow: none;
-	}
-	.btn:not(:focus) {
-		box-shadow: none !important;
-	}
-	.btn:disabled,
-	.btn.disabled:hover,
-	.btn.disabled:focus {
-		z-index: auto;
-	}
-	.btn-secondary:not(.active):not(:active):not(.disabled):not(disabled):hover {
-		border-color: transparent;
-	}
+
+    &.btn-group-lg {
+        border-radius: $border-radius-lg;
+    }
+
+    .btn-group,
+    .btn-group-vertical {
+        box-shadow: none;
+    }
+
+    .btn:not(:focus) {
+        box-shadow: none !important;
+    }
+
+    .btn:disabled,
+    .btn.disabled:hover,
+    .btn.disabled:focus {
+        z-index: auto;
+    }
+
+    .btn-secondary:not(.active):not(:active):not(.disabled):not(disabled):hover {
+        border-color: transparent;
+    }
 }
+
 @mixin btn-left-divider($color) {
-	position: relative;
-	&:not(.active):not(:active) {
-		&:before {
-			content: "";
-			position: absolute;
-			top: -$btn-border-width;
-			left: -1px;
-			height: calc(100% + 2 * #{$btn-border-width}); 
-			width: $btn-border-width;
-			background-color: $color;
-		}
-	}
+    position: relative;
+    &:not(.active):not(:active) {
+        &:before {
+            content: "";
+            position: absolute;
+            top: -$btn-border-width;
+            left: -1px;
+            height: calc(100% + 2 * #{$btn-border-width});
+            width: $btn-border-width;
+            background-color: $color;
+        }
+    }
 }
+
 @mixin btn-right-divider($color) {
-	position: relative;
-	&:not(.active):not(:active) {
-		&:not(.dropdown-toggle):after {
-			content: "";
-			position: absolute;
-			top: -$btn-border-width;
-			right: -1px;
-			height: calc(100% + 2 * #{$btn-border-width}); 
-			width: $btn-border-width;
-			background-color: $color;
-		}
-	}
+    position: relative;
+    &:not(.active):not(:active) {
+        &:not(.dropdown-toggle):after {
+            content: "";
+            position: absolute;
+            top: -$btn-border-width;
+            right: -1px;
+            height: calc(100% + 2 * #{$btn-border-width});
+            width: $btn-border-width;
+            background-color: $color;
+        }
+    }
 }
+
 @mixin btn-top-divider($color) {
-	position: relative;
-	&:not(.active):not(:active):before {
-		content: "";
-		position: absolute;
-		top: -1px;
-		left: -$btn-border-width;
-		height: 1px;
-		width: calc(100% + 2 * #{$btn-border-width});
-		background-color: $color;
-	}
+    position: relative;
+    &:not(.active):not(:active):before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: -$btn-border-width;
+        height: 1px;
+        width: calc(100% + 2 * #{$btn-border-width});
+        background-color: $color;
+    }
 }
+
 @mixin btn-bottom-divider($color) {
-	position: relative;
-	&:not(.dropdown-toggle):after {
-		content: "";
-		position: absolute;
-		bottom: -1px;
-		left: -$btn-border-width;
-		height: 1px;
-		width: calc(100% + 2 * #{$btn-border-width});
-		background-color: $color;
-}
+    position: relative;
+    &:not(.dropdown-toggle):after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: -$btn-border-width;
+        height: 1px;
+        width: calc(100% + 2 * #{$btn-border-width});
+        background-color: $color;
+    }
 }
 
 .btn-group {
-	@each $color, $value in $theme-colors {
-		@if $color == "secondary" {
-			& > .btn-secondary:not(:first-child),
-			& > .btn-group:not(:first-child) > .btn-secondary:first-child {
-				@include btn-left-divider(#eaeaea);
-			}
-			& > .btn-secondary:not(:last-child),
-			& > .btn-group:not(:last-child) > .btn-secondary:last-child {
-				@include btn-right-divider(#eaeaea);
-			}
-		} @else {
-			& > .btn-#{$color}:not(:first-child),
-			& > .btn-group:not(:first-child) > .btn-#{$color}:first-child {
-				@include btn-left-divider(darken($value, 7.5%));
-			}
-			& > .btn-#{$color}:not(:last-child),
-			& > .btn-group:not(:last-child) > .btn-#{$color}:last-child {
-				@include btn-right-divider(darken($value, 7.5%));
-			}
-		} 
-	}
+    @each $color, $value in $theme-colors {
+        @if $color == "secondary" {
+            & > .btn-secondary:not(:first-child),
+            & > .btn-group:not(:first-child) > .btn-secondary:first-child {
+                @include btn-left-divider(#eaeaea);
+            }
+            & > .btn-secondary:not(:last-child),
+            & > .btn-group:not(:last-child) > .btn-secondary:last-child {
+                @include btn-right-divider(#eaeaea);
+            }
+        } @else {
+            & > .btn-#{$color}:not(:first-child),
+            & > .btn-group:not(:first-child) > .btn-#{$color}:first-child {
+                @include btn-left-divider(darken($value, 7.5%));
+            }
+            & > .btn-#{$color}:not(:last-child),
+            & > .btn-group:not(:last-child) > .btn-#{$color}:last-child {
+                @include btn-right-divider(darken($value, 7.5%));
+            }
+        }
+    }
 }
+
 .btn-group-vertical {
-	@each $color, $value in $theme-colors {
-		@if $color == "secondary" {
-			& > .btn-secondary:not(:first-child),
-			& > .btn-group-vertical:not(:first-child) > .btn-secondary:first-child {
-				@include btn-top-divider(#eaeaea);
-			}
-			& > .btn-secondary:not(:last-child),
-			& > .btn-group-vertical:not(:last-child) > .btn-secondary:last-child {
-				@include btn-bottom-divider(#eaeaea);
-			}
-		} @else {
-			& > .btn-#{$color}:not(:first-child),
-			& > .btn-group-vertical:not(:first-child) > .btn-#{$color}:first-child {
-				@include btn-top-divider(darken($value, 7.5%));
-			}
-			& > .btn-#{$color}:not(:last-child),
-			& > .btn-group-vertical:not(:last-child) > .btn-#{$color}:last-child {
-				@include btn-bottom-divider(darken($value, 7.5%));
-			}
-		} 
-	}
+    @each $color, $value in $theme-colors {
+        @if $color == "secondary" {
+            & > .btn-secondary:not(:first-child),
+            & > .btn-group-vertical:not(:first-child) > .btn-secondary:first-child {
+                @include btn-top-divider(#eaeaea);
+            }
+            & > .btn-secondary:not(:last-child),
+            & > .btn-group-vertical:not(:last-child) > .btn-secondary:last-child {
+                @include btn-bottom-divider(#eaeaea);
+            }
+        } @else {
+            & > .btn-#{$color}:not(:first-child),
+            & > .btn-group-vertical:not(:first-child) > .btn-#{$color}:first-child {
+                @include btn-top-divider(darken($value, 7.5%));
+            }
+            & > .btn-#{$color}:not(:last-child),
+            & > .btn-group-vertical:not(:last-child) > .btn-#{$color}:last-child {
+                @include btn-bottom-divider(darken($value, 7.5%));
+            }
+        }
+    }
 }
 
 // Breadcrumb
 
 .breadcrumb {
-	font-weight: 500;
+    font-weight: 500;
 }
+
 .breadcrumb-item a {
-	color: #716d78;
+    color: #716d78;
 }
 
 // Card
 
 .card-header {
-	font-size: 1rem;
-	font-weight: 500;
-	margin-bottom: 0;
-	background-color: rgba(34,34,34,.03);
-	border-bottom: 1px solid rgba(34,34,34,.125);
-	padding: .5rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    background-color: rgba(34, 34, 34, .03);
+    border-bottom: 1px solid rgba(34, 34, 34, .125);
+    padding: .5rem 1.25rem;
 }
+
 .card-body {
-	padding: 0.75rem 1.25rem;
+    padding: 0.75rem 1.25rem;
 }
+
 .card-footer {
-	padding: .5rem 1.25rem;
+    padding: .5rem 1.25rem;
 }
 
 // Forms
@@ -199,37 +218,41 @@
 .input-group > .dxbs-input-group-append > .btn, /* bz */
 .input-group > .btn, /* bs5 */
 .input-group > .input-group-append > .btn {
-  box-shadow: none !important;
+    box-shadow: none !important;
 }
+
 .input-group > .input-group-prepend > .btn-secondary,
 .input-group > .dxbs-input-group-append > .btn-secondary, /* bz */
 .input-group > .btn-secondary, /* bs5 */
 .input-group > .input-group-append > .btn-secondary {
-  border-color: $input-border-color !important;
+    border-color: $input-border-color !important;
 }
 
 // List group
 
 .list-group {
-	border-radius: .25rem;
+    border-radius: .25rem;
 }
 
 // Modal
 
 @if not $enable-shadows {
-	.modal-content {
-		box-shadow: $theme-box-shadow-lg;
-	}
+    .modal-content {
+        box-shadow: $theme-box-shadow-lg;
+    }
 }
+
 .modal-header {
-	font-size: 1rem;
-	font-weight: 500;
+    font-size: 1rem;
+    font-weight: 500;
 }
+
 .modal-header {
-	padding: .5rem 1rem;
+    padding: .5rem 1rem;
 }
+
 .modal-footer {
-	padding: .25rem .75rem;
+    padding: .25rem .75rem;
 }
 
 // Navs
@@ -237,54 +260,62 @@
 .nav-tabs .nav-link {
     border-width: 0 0 3px 0;
 }
+
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link.active:hover,
 .nav-tabs .nav-link.active:focus {
-	border-color: #5f368d;
+    border-color: #5f368d;
 }
 
 // Switches
 
 .custom-switch .custom-control-label::after {
-	border-radius: 50%;
-	top: 0.1rem;
-	left: -2.375rem;
+    border-radius: 50%;
+    top: 0.1rem;
+    left: -2.375rem;
 }
+
 .custom-switch .custom-control-label::before {
-	height: 0.875rem;
-	top: calc(.16rem + 2px);
-	background-color: #000;
-	border-color:  #000;
-	opacity: 0.3;
+    height: 0.875rem;
+    top: calc(.16rem + 2px);
+    background-color: #000;
+    border-color: #000;
+    opacity: 0.3;
 }
-.custom-switch .custom-control-input:checked:disabled~.custom-control-label::before,
-.custom-switch .custom-control-input:disabled~.custom-control-label::before {
-	background-color: #000;
-	border-color:  #000;
-	opacity: 0.1;
+
+.custom-switch .custom-control-input:checked:disabled ~ .custom-control-label::before,
+.custom-switch .custom-control-input:disabled ~ .custom-control-label::before {
+    background-color: #000;
+    border-color: #000;
+    opacity: 0.1;
 }
-.custom-switch .custom-control-input:checked:disabled~.custom-control-label::after,
-.custom-switch .custom-control-input:disabled~.custom-control-label::after {
-	background-color: #eeeeee!important;
+
+.custom-switch .custom-control-input:checked:disabled ~ .custom-control-label::after,
+.custom-switch .custom-control-input:disabled ~ .custom-control-label::after {
+    background-color: #eeeeee !important;
 }
-.custom-switch .custom-control-input:focus:not(:checked)~.custom-control-label::before {
-	border-color:  #000;
-	opacity: 0.3;
+
+.custom-switch .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #000;
+    opacity: 0.3;
 }
+
 .custom-switch .custom-control-label::after {
-	box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.3);
-	background-color: #fff;
+    box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.3);
+    background-color: #fff;
 }
-.custom-switch .custom-control-input:checked~.custom-control-label::after {
-	background-color: #5f368d;;
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    background-color: #5f368d;;
 }
 
 // Tables
 
 th {
-	font-weight: 500;
-	font-size: 0.875rem;
+    font-weight: 500;
+    font-size: 0.875rem;
 }
+
 .table-sm,
 .table-sm td,
 .table-sm th {
@@ -294,150 +325,152 @@ th {
 // DX
 
 .form-control[readonly]:not([disabled]).dx-reset-readonly-style {
-	background-color: $input-bg;
+    background-color: $input-bg;
 }
 
 .dxbs-gridview {
-	font-size: 0.8125rem;
-	
-	& > .card > .card-header,
-	& > .card-header,
-	& > .card > .card-body,
-	& > .card-body,
-	& > .card > .card-footer,
-	& > .card-footer {
-		padding: 0.375rem !important;
-	}
-	
-	& > .card > .card-body.dxbs-pager > .card-body {
-		padding-bottom: 0!important;
-	}
-	
-	.dxbs-fixed-header-content > button.btn.btn-link,
-	.dxbs-grid-edit-form .dxbs-fl-ctrl > button.btn.btn-link,
-	.dxbs-cmd-cell > button.btn.btn-link {
-		font-size: 0.8125rem;
-	}
+    font-size: 0.8125rem;
+
+    & > .card > .card-header,
+    & > .card-header,
+    & > .card > .card-body,
+    & > .card-body,
+    & > .card > .card-footer,
+    & > .card-footer {
+        padding: 0.375rem !important;
+    }
+
+    & > .card > .card-body.dxbs-pager > .card-body {
+        padding-bottom: 0 !important;
+    }
+
+    .dxbs-fixed-header-content > button.btn.btn-link,
+    .dxbs-grid-edit-form .dxbs-fl-ctrl > button.btn.btn-link,
+    .dxbs-cmd-cell > button.btn.btn-link {
+        font-size: 0.8125rem;
+    }
 }
 
 .dx-dragging-state {
-	&,
-	.dxbs-fixed-header-content > button.btn.btn-link,
-	.dxbs-cmd-cell > button.btn.btn-link {
-		font-size: 0.8125rem;
-	}
+    &,
+    .dxbs-fixed-header-content > button.btn.btn-link,
+    .dxbs-cmd-cell > button.btn.btn-link {
+        font-size: 0.8125rem;
+    }
 }
 
 .dxbs-fl.form-horizontal > .row:first-child {
     margin-top: .5rem;
 }
+
 .dxbs-fl .form-group {
-	margin-bottom: .5rem;
+    margin-bottom: .5rem;
 }
 
 .dx-blazor-tagbox .dx-blazor-tag .btn.dxbs-cmd-btn.dxbs-tag-remove-btn {
-	@mixin child-outside($offset) {
-		&:before {
-			@content;
-			width: calc(100% + #{2 * $offset});
-			height: calc(100% + #{2 * $offset});
-			left: -$offset;
-			top: -$offset;
-		}
-	}
-	
-	&:not(:focus):not(:hover) {
-		color: #737373 !important;
-	}
-	
-	&:focus,
-	&:hover {
-		color: #fff !important;
-		@include child-outside(.408em) {
-			opacity: 1;
-			background-color: $blue;
-		}		
-	}
-	
-	&.btn-sm:focus,
-	&.btn-sm:hover {
-		@include child-outside(.204em);	
-	}
+    @mixin child-outside($offset) {
+        &:before {
+            @content;
+            width: calc(100% + #{2 * $offset});
+            height: calc(100% + #{2 * $offset});
+            left: -$offset;
+            top: -$offset;
+        }
+    }
+
+    &:not(:focus):not(:hover) {
+        color: #737373 !important;
+    }
+
+    &:focus,
+    &:hover {
+        color: #fff !important;
+        @include child-outside(.408em) {
+            opacity: 1;
+            background-color: $blue;
+        }
+    }
+
+    &.btn-sm:focus,
+    &.btn-sm:hover {
+        @include child-outside(.204em);
+    }
 }
 
 .dxbs-focus-hidden {
-	@each $color, $value in $theme-colors {
-		.btn-#{$color} {
-			&:focus,
-			&.focus {
-				@if $color == "secondary" {
-					&:not(:hover):not(.hover):not(:active):not(.active) {
-						color: #212529;
-						background-color: #fff;
-					}
-					border-color: #fff;
-					&:not(:disabled):not(.disabled) {
-						box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2) !important;
-					}
-				} @else {
-					&:not(:hover):not(.hover):not(:active):not(.active) {
-						color: color-yiq($value);
-						@include gradient-bg($value);
-					}
-					border-color: $value;
-				}
-				box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2) !important;
-			}
-		}
-		.btn-outline-#{$color} {
-			&:focus,
-			&.focus {
-				box-shadow: none !important;
-			}
-		}
-		.btn-group,
-		.btn-group-vertical,
-		.input-group > .input-group-prepend,
-		.input-group > .dxbs-input-group-append, /* bz */
-		.input-group, /* bs5 */
-		.input-group > .input-group-append {
-			.btn-#{$color} {
-				&:focus,
-				&.focus {
-					box-shadow: none !important;
-					@if $color == "secondary" {
-						&:not(:disabled):not(.disabled) {
-							box-shadow: none !important;
-						}
-					}
-				}
-			}
-		}
-		.input-group > .input-group-prepend,
-		.input-group > .dxbs-input-group-append, /* bz */
-		.input-group, /* bs5 */
-		.input-group > .input-group-append {
-			& > .btn-#{$color} {
-				&:focus,
-				&.focus {
-					border-color: $input-border-color;
-				}
-			}
-		}
-	}
-	.btn-link {
-		&:focus,
-		&.focus {
-			box-shadow: none !important;
-			text-decoration: none;
-		}
-	}
+    @each $color, $value in $theme-colors {
+        .btn-#{$color} {
+            &:focus,
+            &.focus {
+                @if $color == "secondary" {
+                    &:not(:hover):not(.hover):not(:active):not(.active) {
+                        color: #212529;
+                        background-color: #fff;
+                    }
+                    border-color: #fff;
+                    &:not(:disabled):not(.disabled) {
+                        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2) !important;
+                    }
+                } @else {
+                    &:not(:hover):not(.hover):not(:active):not(.active) {
+                        color: color-yiq($value);
+                        @include gradient-bg($value);
+                    }
+                    border-color: $value;
+                }
+                box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2) !important;
+            }
+        }
+        .btn-outline-#{$color} {
+            &:focus,
+            &.focus {
+                box-shadow: none !important;
+            }
+        }
+        .btn-group,
+        .btn-group-vertical,
+        .input-group > .input-group-prepend,
+        .input-group > .dxbs-input-group-append, /* bz */
+        .input-group, /* bs5 */
+        .input-group > .input-group-append {
+            .btn-#{$color} {
+                &:focus,
+                &.focus {
+                    box-shadow: none !important;
+                    @if $color == "secondary" {
+                        &:not(:disabled):not(.disabled) {
+                            box-shadow: none !important;
+                        }
+                    }
+                }
+            }
+        }
+        .input-group > .input-group-prepend,
+        .input-group > .dxbs-input-group-append, /* bz */
+        .input-group, /* bs5 */
+        .input-group > .input-group-append {
+            & > .btn-#{$color} {
+                &:focus,
+                &.focus {
+                    border-color: $input-border-color;
+                }
+            }
+        }
+    }
+
+    .btn-link {
+        &:focus,
+        &.focus {
+            box-shadow: none !important;
+            text-decoration: none;
+        }
+    }
 }
 
 .dxbs-menu {
     .dropdown-menu.dx-dropdown-menu {
-		border: 1px solid #e3e3e3;
-		border-radius: 2px;
-		box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.18);
+        border: 1px solid #e3e3e3;
+        border-radius: 2px;
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.18);
     }
 }
