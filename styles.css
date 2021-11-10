@@ -1,60 +1,72 @@
-body{
-    padding-top: 80px;
+body {
+  padding-top: 80px;
 }
+
 .container {
-    display: flex;
+  display: flex;
 }
+
 .navigation-menu {
-    width: 120px;
-    position: fixed;
+  width: 120px;
+  position: fixed;
 }
+
 .components-container {
-    padding-left: 150px;
-    padding-bottom: 40px;
-    flex-grow: 1; 
+  padding-left: 150px;
+  padding-bottom: 40px;
+  flex-grow: 1;
 }
+
 .component-header {
-    display: block;
+  display: block;
 }
+
 .component-header {
-    margin-bottom: 24px; 
+  margin-bottom: 24px;
 }
+
 .component-header:not(:first-child) {
-    margin-top: 48px; 
+  margin-top: 48px;
 }
+
 .component-example + .component-example {
-    margin-top: 20px; 
+  margin-top: 20px;
 }
+
 .component-example .card {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
+
 .component-example .modal {
-    display:block;
-    
-    position:relative;
-    top:auto;
-    right:auto;
-    left:auto;
-    bottom:auto;
-    z-index:1;
-    overflow: visible;
+  display: block;
+
+  position: relative;
+  top: auto;
+  right: auto;
+  left: auto;
+  bottom: auto;
+  z-index: 1;
+  overflow: visible;
 }
+
 .component-example .modal-dialog {
-    width:90%;
-    margin: 5px;
+  width: 90%;
+  margin: 5px;
 }
+
 .component-example .popover {
-    position:relative;
-    display:inline-block;
-    width:220px;
-    margin:20px
+  position: relative;
+  display: inline-block;
+  width: 220px;
+  margin: 20px
 }
 
 @media (max-width: 991px) {
-    .navigation-menu {
-        display: none;
-    }
-    .components-container {
-        padding-left: 0;
-    }
+  .navigation-menu {
+    display: none;
+  }
+
+  .components-container {
+    padding-left: 0;
+  }
 }
