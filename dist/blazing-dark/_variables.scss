@@ -27,6 +27,8 @@ $border-radius: .2rem;
 $border-radius-sm: .15rem;
 $border-radius-lg: .3rem;
 
+$enable-shadows: true;
+
 $min-contrast-ratio: 2.2 !default;
 
 // Elements
@@ -39,7 +41,7 @@ $text-muted: $gray-400;
 // Custom Variables
 
 $theme-box-shadow-sm: 0px 1px 4px 0px rgba(0, 0, 0, 0.2) !default;
-$theme-box-shadow-lg: 0px 2px 6px 0px rgba(0, 0, 0, 0.3) !default;
+$theme-box-shadow-lg: 0px 2px 12px 0px rgba(0, 0, 0, 0.25) !default;
 
 // Alert
 
@@ -67,6 +69,7 @@ $breadcrumb-border-radius: $border-radius;
 
 // Buttons
 
+$btn-primary-light-color: #c86afa !default;
 $btn-padding-x: .75rem;
 $btn-box-shadow: $theme-box-shadow-sm;
 $btn-active-box-shadow: $theme-box-shadow-sm;
@@ -89,6 +92,7 @@ $dropdown-link-disabled-color: $gray-400;
 $dropdown-border-radius: $border-radius;
 $dropdown-item-padding-x: 1rem;
 $dropdown-divider-bg: $gray-400;
+$dropdown-box-shadow: $theme-box-shadow-lg;
 
 // Forms
 

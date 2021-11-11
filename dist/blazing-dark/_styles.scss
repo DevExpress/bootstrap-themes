@@ -38,8 +38,17 @@ hr {
 
 // Buttons
 
-.btn-link {
+.btn-outline-primary {
+    color: $btn-primary-light-color;
+    border-color: $btn-primary-light-color;
+ }
+ 
+ .btn-link {
     color: $white;
+}
+
+.btn-link:focus {
+   box-shadow: 0 0 0 0.2rem rgba(155, 23, 226, 0.5);
 }
 
 .btn.btn-outline-dark {
@@ -227,7 +236,7 @@ hr {
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-    background-color: $black;
+    background-color: $gray-900;
 }
 
 // Forms
@@ -264,12 +273,6 @@ hr {
 }
 
 // Modal
-
-@if not $enable-shadows {
-    .modal-content {
-        box-shadow: $theme-box-shadow-lg;
-    }
-}
 
 .modal-header {
     font-size: 1rem;

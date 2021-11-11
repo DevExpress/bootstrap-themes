@@ -14,12 +14,14 @@ $border-radius: .2rem;
 $border-radius-sm: .15rem;
 $border-radius-lg: .3rem;
 
+$enable-shadows: true;
+
 $min-contrast-ratio: 2.2 !default;
 
 // Custom Variables
 
 $theme-box-shadow-sm: 0px 1px 4px 0px rgba(0, 0, 0, 0.2) !default;
-$theme-box-shadow-lg: 0px 2px 6px 0px rgba(0, 0, 0, 0.3) !default;
+$theme-box-shadow-lg: 0px 2px 12px 0px rgba(0, 0, 0, 0.25) !default;
 
 // Alert
 
@@ -52,6 +54,7 @@ $card-border-color: rgba(34, 34, 34, .125);
 
 $dropdown-border-radius: .25rem;
 $dropdown-item-padding-x: 1rem;
+$dropdown-box-shadow: $theme-box-shadow-lg;
 
 // Forms
 
