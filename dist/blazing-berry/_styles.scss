@@ -303,6 +303,18 @@
     background-color: #5f368d;;
 }
 
+// File 
+
+.input-group > .custom-file:not(:last-child) .custom-file-label {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-group > .custom-file:first-child .custom-file-label {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+}
+
 // Tables
 
 th {

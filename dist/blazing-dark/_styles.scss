@@ -39,8 +39,8 @@ hr {
 // Buttons
 
 .btn-outline-primary {
-    color: $btn-primary-light-color;
-    border-color: $btn-primary-light-color;
+    color: $primary-alt;
+    border-color: $primary-alt;
  }
  
  .btn-link {
@@ -345,6 +345,18 @@ hr {
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
     background-color: $blue;
+}
+
+// File 
+
+.input-group > .custom-file:not(:last-child) .custom-file-label {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-group > .custom-file:first-child .custom-file-label {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
 }
 
 // Tables

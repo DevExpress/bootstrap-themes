@@ -16,6 +16,7 @@ $gray-700: #46444a;
 $gray-800: #37353d;
 $gray-900: #2b2a2f;
 
+$primary-alt: #c86afa !default;
 $secondary: $gray-900;
 $dark: $gray-700;
 
@@ -69,7 +70,6 @@ $breadcrumb-border-radius: $border-radius;
 
 // Buttons
 
-$btn-primary-light-color: #c86afa !default;
 $btn-padding-x: .75rem;
 $btn-box-shadow: $theme-box-shadow-sm;
 $btn-active-box-shadow: $theme-box-shadow-sm;
@@ -107,12 +107,16 @@ $input-border-color: $gray-400;
 $btn-padding-y-sm: .2195rem;
 $input-group-addon-color: $white;
 $input-group-addon-bg: $black;
+$form-check-input-checked-border-color: $primary-alt;
+$form-check-input-indeterminate-border-color: $primary-alt;
 
 $custom-control-indicator-size: 1.25rem;
 $custom-control-indicator-bg-size: 100% 100%;
 $custom-checkbox-indicator-icon-checked: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-2 -2 12 12'%3e%3cpath fill='%23fff' d='M7,1L3,5L1,3L0,4l3,3l5-5L7,1z'/%3e%3c/svg%3e");
 $custom-radio-indicator-icon-checked: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%%3ccircle r='2.3' fill='%23fff'/%3e%3c/svg%3e");
 $custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3crect x='2' y='2' width='4' height='4' fill='%23fff'/%3e%3c/svg%3e");
+$custom-control-indicator-checked-border-color: $primary-alt;
+$custom-checkbox-indicator-indeterminate-border-color: $primary-alt;
 
 // Jumbotron
 
@@ -155,6 +159,7 @@ $btn-close-opacity: 0.8; // bs5
 $pagination-color: $white;
 $pagination-bg: $gray-700;
 $pagination-border-color: $gray-400;
+$pagination-active-border-color: $primary-alt;
 $pagination-disabled-color: $gray-400;
 $pagination-disabled-bg: $gray-700;
 $pagination-disabled-border-color: $gray-400;
