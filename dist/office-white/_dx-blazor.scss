@@ -1,0 +1,113 @@
+.dx-blazor-tagbox .dx-blazor-tag .btn.dxbs-cmd-btn.dxbs-tag-remove-btn {
+    @mixin child-outside($offset) {
+        &:before {
+            @content;
+            width: calc(100% + #{2 * $offset});
+            height: calc(100% + #{2 * $offset});
+            left: -$offset;
+            top: -$offset;
+        }
+    }
+
+    &:not(:focus):not(:hover) {
+        color: #737373 !important;
+    }
+
+    &:focus,
+    &:hover {
+        color: #fff !important;
+        @include child-outside(.408em) {
+            opacity: 1;
+            background-color: $blue;
+        }
+    }
+
+    &.btn-sm:focus,
+    &.btn-sm:hover {
+        @include child-outside(.204em);
+    }
+}
+
+.dxbs-focus-hidden {
+    @each $color, $value in $theme-colors {
+        .btn-#{$color} {
+            &:focus,
+            &.focus {
+                &:not(:hover):not(.hover):not(:active):not(.active) {
+                    color: color-yiq($value);
+                    @include gradient-bg($value);
+                }
+
+                border-color: $value;
+                @if $color == "secondary" {
+                    &,
+                    &:not(:disabled):not(.disabled) {
+                        @if $enable-shadows {
+                            box-shadow: $btn-box-shadow !important;
+                        } @else {
+                            box-shadow: none !important;
+                        }
+                    }
+                } @else {
+                    @if $enable-shadows {
+                        box-shadow: $btn-box-shadow !important;
+                    } @else {
+                        box-shadow: none !important;
+                    }
+                }
+            }
+        }
+        .btn-outline-#{$color} {
+            &:focus,
+            &.focus {
+                box-shadow: none !important;
+            }
+        }
+        .btn-group,
+        .btn-group-vertical,
+        .input-group > .input-group-prepend,
+        .input-group > .dxbs-input-group-append, /* bz */
+        .input-group, /* bs5 */
+        .input-group > .input-group-append {
+            .btn-#{$color} {
+                &:focus,
+                &.focus {
+                    box-shadow: none !important;
+
+                    @if $color == "secondary" {
+                        &:not(:disabled):not(.disabled) {
+                            box-shadow: none !important;
+                        }
+                    }
+                }
+            }
+        }
+        .input-group > .input-group-prepend,
+        .input-group > .dxbs-input-group-append, /* bz */
+        .input-group, /* bs5 */
+        .input-group > .input-group-append {
+            & > .btn-#{$color} {
+                &:focus,
+                &.focus {
+                    border-color: $input-border-color;
+                }
+            }
+        }
+    }
+
+    .btn-link {
+        &:focus,
+        &.focus {
+            box-shadow: none !important;
+            text-decoration: none;
+        }
+    }
+}
+
+.dxbs-menu {
+    .dropdown-menu.dx-dropdown-menu {
+        border: 1px solid #e3e3e3;
+        border-radius: 2px;
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.18);
+    }
+}

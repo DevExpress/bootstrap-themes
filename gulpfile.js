@@ -1,8 +1,17 @@
-var themes = ["purple", "office-white", "blazing-berry", "blazing-dark"];
+var themes = [
+    "purple",
+    "purple.v5",
+    "office-white",
+    "office-white.v5",
+    "blazing-berry",
+    "blazing-berry.v5",
+    "blazing-dark",
+    "blazing-dark.v5"
+];
 
 var distSCSS = "dist";
-var distCSS = () => {
-    return process.env.BOOTSTRAP_VERSION === "5" ? "dist.v5" : "dist";
+var distCSS = (theme) => {
+    return theme.indexOf("v5") > -1 ? "dist.v5" : "dist";
 }
 
 var gulp = require('gulp'),
@@ -40,15 +49,20 @@ var minifyCss = lazypipe()
     .pipe(rename, {suffix: '.min'});
 
 themes.forEach(theme => {
-    gulp.task('compile-' + theme, () =>
-        gulp.src(distSCSS + '/' + theme + '/*.scss')
+    gulp.task('compile-' + theme, (cb) => {
+        debugger
+        const themeDirName = theme.split('.')[0];
+        gulp.src(distSCSS + '/' + themeDirName + `/${theme}.scss`)
             .pipe(compileTheme())
-            .pipe(gulp.dest(distCSS() + '/' + theme + '/'))
+            .pipe(gulp.dest(distCSS(theme) + '/' + themeDirName + '/'))
             .pipe(minifyCss())
-            .pipe(gulp.dest(distCSS() + '/' + theme + '/'))
-            .pipe(connect.reload()));
+            .pipe(gulp.dest(distCSS(theme) + '/' + themeDirName + '/'))
+            .pipe(connect.reload());
+        cb();
+    });
     gulp.task('watch-' + theme, (cb) => {
-        gulp.watch(distSCSS + '/' + theme + '/*.scss', gulp.series('compile-' + theme));
+        const themeDirName = theme.split('.')[0];
+        gulp.watch(distSCSS + '/' + themeDirName + '/*.scss', gulp.series('compile-' + theme));
         cb();
     });
 });
@@ -72,11 +86,6 @@ gulp.task('attachHtml', (cb) => {
     gulp.watch('./*.html', gulp.series('html'));
     cb();
 });
-gulp.task('prepare', (cb) => {
-    var pkgJson = JSON.parse(require('fs').readFileSync('./package.json'));
-    process.env.BOOTSTRAP_VERSION = pkgJson["dependencies"]["bootstrap"].substring(1, 2);
-    cb();
-});
-gulp.task('default', gulp.series('prepare', themes.map(theme => "compile-" + theme)));
+gulp.task('default', gulp.series(themes.map(theme => "compile-" + theme)));
 gulp.task('watch', gulp.series('default', 'connect', 'attachHtml', 'attachScss'));
 
