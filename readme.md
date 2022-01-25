@@ -5,7 +5,7 @@
 Free DevExpress Bootstrap v4 / v5 Themes
 =====================================
 
-This repository contains free and open source themes that were created for websites built using Bootstrap v4 / v5 or later.
+This repository contains free and open source themes that were created for websites built using Bootstrap v4 and v5.
 
 ## Table of Contents
 - [What's Included](#whats-included)
@@ -64,19 +64,18 @@ The [/dist/](dist) and [/dist.v5/](dist.v5) folders include nested folders whose
 
 Do the following to customize the theme source files and compile the resulting theme:
 1. Clone or download this repository.
-1. Open the **dist/{theme_name}/_variables.scss** file and modify [v4](https://getbootstrap.com/docs/4.6/getting-started/theming/#variable-defaults) / [v5](https://getbootstrap.com/docs/5.0/customize/sass/#variable-defaults) variable values. You can also add your own variables.
-1. Open the **dist/{theme_name}/_styles.scss** file. Modify CSS rules or create custom rules. You can use a browser’s Developer Tools to [inspect UI elements](https://www.devexpress.com/Support/Center/Question/Details/K18570/how-to-inspect-css-rules).
+1. Go to the **dist/{theme_name}** or **dist.v5/{theme_name}** folder. Open the **_variables.scss** file and modify [v4](https://getbootstrap.com/docs/4.6/getting-started/theming/#variable-defaults) / [v5](https://getbootstrap.com/docs/5.0/customize/sass/#variable-defaults) variable values. You can also add your own variables.
+1. In the same folder, open the **_styles.scss** file. Modify CSS rules or create custom rules. You can use a browser’s Developer Tools to [inspect UI elements](https://www.devexpress.com/Support/Center/Question/Details/K18570/how-to-inspect-css-rules).
 1. Install [Node.js and npm](https://nodejs.org/en/download/) if they do not exist on your machine.
-1. Go to the folder where the **package.json** file is located. By default, the target bootstrap package source version is set to "^5". You can specify the required version (for example, "^4") by modifying the **package.json -> dependencies -> bootstrap** value. Then, open the console window and run `npm install` to install all the dependencies (repeat after changing the bootstrap package version).
+1. Go to the folder where the **package.json** file is located. Open the console window and run `npm install` to install all the dependencies.
 1. Execute the  `npm i --global gulp` command to install the [gulp](https://gulpjs.com/) globally.
 3. Run `gulp` to compile all themes once or `gulp watch` to turn on the watcher that recompiles themes as soon as you change source SCSS files. 
 
-This creates two new CSS files (**bootstrap.css** and **bootstrap.min.css**) in each theme's folder or overwrites the existing files according to your changes.
-
+This overwrites the **bootstrap.css** and **bootstrap.min.css** files for each theme in the **dist** and **dist.v5** folders.
 
 ## Copyright and License
 
-Copyright © 2018-2021 [Developer Express Inc.](https://devexpress.com/) All trademarks or registered trademarks are property of their respective owners. 
+Copyright © 2018-2022 [Developer Express Inc.](https://devexpress.com/) All trademarks or registered trademarks are property of their respective owners. 
 This project code is released under the [MIT License](LICENSE).
 
 ## More Information
