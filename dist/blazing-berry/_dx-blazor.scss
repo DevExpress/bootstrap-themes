@@ -148,3 +148,24 @@
         box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.18);
     }
 }
+
+:root {
+    --dx-grid-container-color: rgb(255, 255, 255);
+    --dx-grid-header-color: rgb(246, 246, 246);
+    --dx-grid-group-footer-color: rgb(251, 251, 251);
+    --dx-grid-footer-color: rgb(246, 246, 246);
+    --dx-grid-selection-color: rgb(237, 237, 237);
+    --dx-grid-touch-color: rgb(222, 222, 223);
+    --dx-grid-table-border-bottom-width: 1px;
+    --dx-grid-table-border-left-width: 1px;
+
+    --dx-calendar-header-hover-color: rgb(233, 233, 234);
+    --dx-calendar-header-selection-color: rgb(222, 222, 223);
+    --dx-calendar-header-active-color: rgb(200, 201, 202);
+
+    --dx-calendar-table-hover-color: rgb(244, 244, 244);
+    --dx-calendar-table-selection-color: rgb(233, 233, 234);
+    --dx-calendar-table-active-color: rgb(211, 211, 212);
+    --dx-calendar-table-selected-today-color: rgb(89, 52, 131);
+}
+
