@@ -51,6 +51,11 @@ hr {
    box-shadow: 0 0 0 0.2rem rgba(155, 23, 226, 0.5);
 }
 
+.btn-link:disabled,
+.btn-link.disabled {
+    color: $gray-300;
+ }
+ 
 .btn.btn-outline-dark {
     color: $gray-300;
 }
