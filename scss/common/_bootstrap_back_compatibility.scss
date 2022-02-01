@@ -1,4 +1,5 @@
 //v4 compatibility for blazor
+@use "sass:math";
 
 //variables
 $custom-forms-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
@@ -47,7 +48,7 @@ $custom-radio-indicator-border-radius: 50% !default;
 $custom-radio-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'><circle r='3' fill='#{$custom-control-indicator-checked-color}'/></svg>") !default;
 
 $custom-switch-width: $custom-control-indicator-size * 1.75 !default;
-$custom-switch-indicator-border-radius: $custom-control-indicator-size / 2 !default;
+$custom-switch-indicator-border-radius: math.div($custom-control-indicator-size, 2) !default;
 $custom-switch-indicator-size: subtract($custom-control-indicator-size, $custom-control-indicator-border-width * 4) !default;
 
 
@@ -76,7 +77,7 @@ $custom-switch-indicator-size: subtract($custom-control-indicator-size, $custom-
     left: 0;
     z-index: -1; // Put the input behind the label so it doesn't overlay text
     width: $custom-control-indicator-size;
-    height: ($font-size-base * $line-height-base + $custom-control-indicator-size) / 2;
+    height: math.div($font-size-base * $line-height-base + $custom-control-indicator-size, 2);
     opacity: 0;
 
     &:checked ~ .custom-control-label::before {
@@ -137,7 +138,7 @@ $custom-switch-indicator-size: subtract($custom-control-indicator-size, $custom-
     // Background-color and (when enabled) gradient
     &::before {
         position: absolute;
-        top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
+        top: math.div($font-size-base * $line-height-base - $custom-control-indicator-size, 2);
         left: -($custom-control-gutter + $custom-control-indicator-size);
         display: block;
         width: $custom-control-indicator-size;
@@ -152,7 +153,7 @@ $custom-switch-indicator-size: subtract($custom-control-indicator-size, $custom-
     // Foreground (icon)
     &::after {
         position: absolute;
-        top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
+        top: math.div($font-size-base * $line-height-base - $custom-control-indicator-size, 2);
         left: -($custom-control-gutter + $custom-control-indicator-size);
         display: block;
         width: $custom-control-indicator-size;
@@ -241,7 +242,7 @@ $custom-switch-indicator-size: subtract($custom-control-indicator-size, $custom-
         }
 
         &::after {
-            top: add(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2, $custom-control-indicator-border-width * 2);
+            top: add(math.div($font-size-base * $line-height-base - $custom-control-indicator-size, 2), $custom-control-indicator-border-width * 2);
             left: add(-($custom-switch-width + $custom-control-gutter), $custom-control-indicator-border-width * 2);
             width: $custom-switch-indicator-size;
             height: $custom-switch-indicator-size;
