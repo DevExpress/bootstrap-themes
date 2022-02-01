@@ -9,13 +9,13 @@ var themes = [
     "blazing-dark.v5"
 ];
 
-var distSCSS = "dist";
+var srcDirName = "scss";
 var distCSS = (theme) => {
     return theme.indexOf("v5") > -1 ? "dist.v5" : "dist";
 }
 
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),
+    sass = require('gulp-sass')(require('sass')),
     sourcemaps = require('gulp-sourcemaps'),
     cleanCss = require('gulp-clean-css'),
     rename = require('gulp-rename'),
@@ -50,9 +50,8 @@ var minifyCss = lazypipe()
 
 themes.forEach(theme => {
     gulp.task('compile-' + theme, (cb) => {
-        debugger
         const themeDirName = theme.split('.')[0];
-        gulp.src(distSCSS + '/' + themeDirName + `/${theme}.scss`)
+        gulp.src(srcDirName + '/' + themeDirName + `/${theme}.scss`)
             .pipe(compileTheme())
             .pipe(gulp.dest(distCSS(theme) + '/' + themeDirName + '/'))
             .pipe(minifyCss())
@@ -62,7 +61,7 @@ themes.forEach(theme => {
     });
     gulp.task('watch-' + theme, (cb) => {
         const themeDirName = theme.split('.')[0];
-        gulp.watch(distSCSS + '/' + themeDirName + '/*.scss', gulp.series('compile-' + theme));
+        gulp.watch(srcDirName + '/' + themeDirName + '/*.scss', gulp.series('compile-' + theme));
         cb();
     });
 });

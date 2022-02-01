@@ -34,8 +34,9 @@
     "gulp-connect": "^5.6.1",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.1",
+    "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^2.6.5",
-    "lazypipe": "^1.0.2"
+    "lazypipe": "^1.0.2",
+    "sass": "^1.45.1"
   }
 }
