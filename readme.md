@@ -8,7 +8,7 @@ Free DevExpress Bootstrap v4 / v5 Themes
 This repository contains free and open source themes that were created for websites built using Bootstrap v4 and v5.
 
 > **Note**  
-> Built-in themes for DevExpress Blazor components are now available as a **DevExpress.Blazor** dependency (v22.1+). Refer to the following topic for information: [Applying Devexpress Blazor Themes](xref:https://docs.devexpress.com/Blazor/401523/common-concepts/customize-appearance/themes).
+> Built-in themes for DevExpress Blazor components are now available as a **DevExpress.Blazor** dependency (v22.1+). Refer to the following topic for information: [Applying Devexpress Blazor Themes](https://docs.devexpress.com/Blazor/401523/common-concepts/customize-appearance/themes).
 
 ## Table of Contents
 - [What's Included](#whats-included)
