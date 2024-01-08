@@ -78,7 +78,7 @@ This overwrites the **bootstrap.css** and **bootstrap.min.css** files for each t
 
 ## Copyright and License
 
-Copyright © 2018-2022 [Developer Express Inc.](https://devexpress.com/) All trademarks or registered trademarks are property of their respective owners. 
+Copyright © 2018-2024 [Developer Express Inc.](https://devexpress.com/) All trademarks or registered trademarks are property of their respective owners. 
 This project code is released under the [MIT License](LICENSE).
 
 ## More Information
