@@ -23,7 +23,7 @@
   "scripts": {},
   "dependencies": {
     "bootstrap4": "npm:bootstrap@^4.6.0",
-    "bootstrap5": "npm:bootstrap@^5.1.3",
+    "bootstrap5": "npm:bootstrap@5.1.3",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1"
   },
