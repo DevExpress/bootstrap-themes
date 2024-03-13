@@ -65,7 +65,8 @@ The [/dist/](dist) and [/dist.v5/](dist.v5) folders include nested folders whose
 
 ## Customization
 
-Do the following to customize the theme source files and compile the resulting theme:
+To customize themes in Blazor applications that use DevExpress Blazor components v22.1 and higher, follow the instructions described in the following help topic: [Customize a Built-in Theme](https://docs.devexpress.com/Blazor/404360/styling-and-themes/devexpress-theme-customization#customize-a-built-in-theme). Perform the following actions to customize DevExpress themes in other applications:
+
 1. Clone or download this repository.
 1. Go to the **dist/{theme_name}** or **dist.v5/{theme_name}** folder. Open the **_variables.scss** file and modify [v4](https://getbootstrap.com/docs/4.6/getting-started/theming/#variable-defaults) / [v5](https://getbootstrap.com/docs/5.0/customize/sass/#variable-defaults) variable values. You can also add your own variables.
 1. In the same folder, open the **_styles.scss** file. Modify CSS rules or create custom rules. You can use a browser’s Developer Tools to [inspect UI elements](https://www.devexpress.com/Support/Center/Question/Details/K18570/how-to-inspect-css-rules).
