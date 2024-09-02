@@ -47,11 +47,11 @@ $theme-box-shadow-lg: 0px 2px 12px 0px rgba(0, 0, 0, 0.25) !default;
 // Alert
 
 $alert-bg-level: 0; // bs4
-$alert-bg-scale: 0; // bs5
+$alert-bg-scale: 0%; // bs5
 $alert-border-level: 0; // bs4
-$alert-border-scale: 0; // bs5
+$alert-border-scale: 0%; // bs5
 $alert-color-level: -10; // bs4
-$alert-color-scale: 0; // bs5
+$alert-color-scale: 0%; // bs5
 $alert-border-radius: $border-radius;
 
 // Badges
@@ -189,9 +189,9 @@ $custom-switch-indicator-size: 1.25rem;
 $table-cell-padding: .5rem;
 $table-cell-padding-sm: .25rem;
 $table-bg-level: 0; // bs4
-$table-bg-scale: 0; // bs5
+$table-bg-scale: 0%; // bs5
 $table-border-level: 0; // bs4
-$table-border-scale: 0; // bs5
+$table-border-scale: 0%; // bs5
 $table-border-color: $gray-400;
 
 // Thumbnail

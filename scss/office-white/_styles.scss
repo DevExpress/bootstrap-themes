@@ -138,7 +138,7 @@
         &:before {
             content: "";
             position: absolute;
-            top: -$btn-border-width;
+            top: calc(-1 * #{$btn-border-width});
             left: -1px;
             height: calc(100% + 2 * #{$btn-border-width});
             width: $btn-border-width;
@@ -153,7 +153,7 @@
         &:not(.dropdown-toggle):after {
             content: "";
             position: absolute;
-            top: -$btn-border-width;
+            top: calc(-1 * #{$btn-border-width});
             right: -1px;
             height: calc(100% + 2 * #{$btn-border-width});
             width: $btn-border-width;
@@ -168,7 +168,7 @@
         content: "";
         position: absolute;
         top: -1px;
-        left: -$btn-border-width;
+        left: calc(-1 * #{$btn-border-width});
         height: 1px;
         width: calc(100% + 2 * #{$btn-border-width});
         background-color: $color;
@@ -181,7 +181,7 @@
         content: "";
         position: absolute;
         bottom: -1px;
-        left: -$btn-border-width;
+        left: calc(-1 * #{$btn-border-width});
         height: 1px;
         width: calc(100% + 2 * #{$btn-border-width});
         background-color: $color;
