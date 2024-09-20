@@ -98,8 +98,8 @@ $input-border-radius: 3px 3px 0 0;
 $input-border-radius-lg: $input-border-radius;
 $input-border-radius-sm: $input-border-radius;
 
-$input-box-shadow: none;
-$input-focus-box-shadow: none;
+$input-box-shadow: inset 0 0px 0px rgb(255, 255, 255);
+$input-focus-box-shadow: 0 0 0 0 rgb(255, 255, 255);
 
 $custom-select-border-width: 2px;
 $custom-select-box-shadow: none;
